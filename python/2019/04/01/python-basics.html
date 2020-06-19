@@ -1,0 +1,3211 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Basics of Python for Data Science and Machine learning | 
+  sambaiga
+</title>
+  
+
+  
+  <meta name="description" content="
+  
+">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Basics of Python for Data Science and Machine learning | sambaiga</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Basics of Python for Data Science and Machine learning" />
+<meta name="author" content="Anthony Faustine" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This post introduce python programming for data scince and machine learning" />
+<meta property="og:description" content="This post introduce python programming for data scince and machine learning" />
+<link rel="canonical" href="https://sambaiga.github.io/python/2019/04/01/python-basics.html" />
+<meta property="og:url" content="https://sambaiga.github.io/python/2019/04/01/python-basics.html" />
+<meta property="og:site_name" content="sambaiga" />
+<meta property="og:image" content="https://sambaiga.github.io/images/post/python.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"image":"https://sambaiga.github.io/images/post/python.jpg","author":{"@type":"Person","name":"Anthony Faustine"},"description":"This post introduce python programming for data scince and machine learning","@type":"BlogPosting","url":"https://sambaiga.github.io/python/2019/04/01/python-basics.html","headline":"Basics of Python for Data Science and Machine learning","dateModified":"2019-04-01T00:00:00-05:00","datePublished":"2019-04-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/python/2019/04/01/python-basics.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="https://sambaiga.github.io/python/2019/04/01/python-basics.html"><link type="application/atom+xml" rel="alternate" href="https://sambaiga.github.io/feed.xml" title="sambaiga" />
+
+  
+
+  
+
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Basics of Python for Data Science and Machine learning | sambaiga</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Basics of Python for Data Science and Machine learning" />
+<meta name="author" content="Anthony Faustine" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This post introduce python programming for data scince and machine learning" />
+<meta property="og:description" content="This post introduce python programming for data scince and machine learning" />
+<link rel="canonical" href="https://sambaiga.github.io/python/2019/04/01/python-basics.html" />
+<meta property="og:url" content="https://sambaiga.github.io/python/2019/04/01/python-basics.html" />
+<meta property="og:site_name" content="sambaiga" />
+<meta property="og:image" content="https://sambaiga.github.io/images/post/python.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"image":"https://sambaiga.github.io/images/post/python.jpg","author":{"@type":"Person","name":"Anthony Faustine"},"description":"This post introduce python programming for data scince and machine learning","@type":"BlogPosting","url":"https://sambaiga.github.io/python/2019/04/01/python-basics.html","headline":"Basics of Python for Data Science and Machine learning","dateModified":"2019-04-01T00:00:00-05:00","datePublished":"2019-04-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/python/2019/04/01/python-basics.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://sambaiga.github.io/feed.xml" title="sambaiga" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    // remove paragraph tags in rendered toc (happens from notebooks)
+    var toctags = document.querySelectorAll(".toc-entry")
+    toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">sambaiga</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/project/">Projects</a><a class="page-link" href="/resources.html">Resources</a><a class="page-link" href="/categories/">Tags</a><a class="page-link" href="/talks/">Talk</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <div class="wrapper">
+    <h1 class="post-title p-name" itemprop="name headline">Basics of Python for Data Science and Machine learning</h1><p class="page-description">This post introduce python programming for data scince and machine learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2019-04-01T00:00:00-05:00" itemprop="datePublished">
+        Apr 1, 2019
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      21 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#python">python</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/sambaiga/sambaiga/tree/master/_notebooks/2019-04-01-python-basics.ipynb" role="button">
+<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div><div class="px-2">
+    <a href="https://colab.research.google.com/github/sambaiga/sambaiga/blob/master/_notebooks/2019-04-01-python-basics.ipynb">
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Basics">Basics </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Python-vs-other-language">Python vs other language </a></li>
+<li class="toc-entry toc-h4"><a href="#Consider-hello-world-in-Java-and-C++">Consider hello world in Java and C++ </a></li>
+<li class="toc-entry toc-h3"><a href="#Java">Java </a></li>
+<li class="toc-entry toc-h3"><a href="#C++">C++ </a></li>
+<li class="toc-entry toc-h3"><a href="#1.1-Comments">1.1 Comments </a></li>
+<li class="toc-entry toc-h3"><a href="#1.2-Variable-and-Print-Statement">1.2 Variable and Print Statement </a></li>
+<li class="toc-entry toc-h3"><a href="#Choosing-a-variable-name:">Choosing a variable name: </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#User-Input">User Input </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#1.3-Operators-and-Expressions">1.3 Operators and Expressions </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Numeric-operator">Numeric operator </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Logical-operators">Logical operators </a></li>
+<li class="toc-entry toc-h3"><a href="#1.4-Control-Flow">1.4 Control Flow </a></li>
+<li class="toc-entry toc-h3"><a href="#Indentation">Indentation </a></li>
+<li class="toc-entry toc-h3"><a href="#IF-statement">IF statement </a></li>
+<li class="toc-entry toc-h3"><a href="#While--statement">While  statement </a></li>
+<li class="toc-entry toc-h3"><a href="#For-Loops">For Loops </a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#Example:">Example: </a></li>
+<li class="toc-entry toc-h4"><a href="#The-break-and-continue-Statement">The break and continue Statement </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Progress-bar">Progress bar </a></li>
+<li class="toc-entry toc-h3"><a href="#1.5-Data-Structures:">1.5 Data Structures: </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#1.5.1-Sequences">1.5.1 Sequences </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Lists">Lists </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#List-comprehensions">List comprehensions </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Tuples">Tuples </a></li>
+<li class="toc-entry toc-h3"><a href="#Range">Range </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Common-Sequence-Operations">Common Sequence Operations </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Important-python-function">Important python function </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#1.5.2-Dictionary">1.5.2 Dictionary </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#1.6-Functions">1.6 Functions </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Note:-Docstrings:">Note: Docstrings: </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Lambda-Expressions">Lambda Expressions </a></li>
+<li class="toc-entry toc-h3"><a href="#Example:">Example: </a></li>
+<li class="toc-entry toc-h3"><a href="#1.7-Module">1.7 Module </a></li>
+<li class="toc-entry toc-h3"><a href="#Packages">Packages </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Import-modules-from-another-directory">Import modules from another directory </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Important-python-module">Important python module </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#1.7-Reading-and-Writing-Data-to-Files-in-Python">1.7 Reading and Writing Data to Files in Python </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Reading-text-files-line-by-line-and-save-to-list">Reading text files line-by-line and save to list </a></li>
+<li class="toc-entry toc-h3"><a href="#Directory-Listing">Directory Listing </a></li>
+<li class="toc-entry toc-h3"><a href="#Making-Directories">Making Directories </a></li>
+<li class="toc-entry toc-h3"><a href="#Exercise-1-:">Exercise 1 : </a></li>
+<li class="toc-entry toc-h3"><a href="#References">References </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#References">References </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2019-04-01-python-basics.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>images/post/python.jpg</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Basics">
+<a class="anchor" href="#Basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics<a class="anchor-link" href="#Basics"> </a>
+</h2>
+<p>Python is a very popular general-purpose programming language.</p>
+<ul>
+<li>Open source general-purpose language</li>
+<li>Dynamically semantics (rather than statically typed like Java or C/C++)</li>
+<li>Interpreted (rather than compiled like Java or C/C++)</li>
+<li>Object Oriented.</li>
+</ul>
+<p>Why is Python such an effective tool in scientific research ?</p>
+<ul>
+<li>Interoperability with Other Languages : You can use it in the shell on microtasks, or interactively, or in scripts, or 
+build enterprise software with GUIs.</li>
+<li>“Batteries Included” + Third-Party Modules : Python has built-in libraries and third-party liabraies for nearly everything.</li>
+<li>Simplicity &amp; Dynamic Nature : You can run your Python code on any architecture.</li>
+<li>Open ethos well-fit to science : Easy to reproduce results with python</li>
+</ul>
+<p>Why is Python such an effective tool for Data Science and Machine learning research</p>
+<ul>
+<li>Very rich scientific computing libraries (numpy, matplotlib, pandas, scipy etc) and machine learning frameworks (Pytorch, Tensorflow, keras, mxnet,  etc)</li>
+<li>All DS and ML tasks can be performed with Python :<ul>
+<li>accessing, collecting, cleaning, analysing, visualising data  modelling, evaluating models, integrating in prod, scaling etc.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Python 2 VS. Python 3</strong></p>
+<p>Two major versions of Python in widespread use : Python 2.x
+and Python 3.x</p>
+<ul>
+<li>Some features in Python 3 are not backward compatible
+with Python 2</li>
+<li>Some Python 2 libraries have not been updated to work
+with Python 3</li>
+<li>Bottom-line : there is no wrong choice, as long as all the libraries you need are supported by the version you choose but most of libararies are phasing out python 2.x.</li>
+<li>In this training : Python3</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Python-vs-other-language">
+<a class="anchor" href="#Python-vs-other-language" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python vs other language<a class="anchor-link" href="#Python-vs-other-language"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Consider-hello-world-in-Java-and-C++">
+<a class="anchor" href="#Consider-hello-world-in-Java-and-C++" aria-hidden="true"><span class="octicon octicon-link"></span></a>Consider hello world in Java and C++<a class="anchor-link" href="#Consider-hello-world-in-Java-and-C++"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Java">
+<a class="anchor" href="#Java" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java<a class="anchor-link" href="#Java"> </a>
+</h3>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Prints "Hello, World" to the terminal window.</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello, World"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+<h3 id="C++">
+<a class="anchor" href="#C++" aria-hidden="true"><span class="octicon octicon-link"></span></a>C++<a class="anchor-link" href="#C++"> </a>
+</h3>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello, World!"</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1-Comments">
+<a class="anchor" href="#1.1-Comments" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.1 Comments<a class="anchor-link" href="#1.1-Comments"> </a>
+</h3>
+<p>Text to the right of the // symbol are comments used as notes for the reader of the program.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello world"</span><span class="p">)</span> <span class="c1"># This is hello world</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use as many useful comments as you can in your program to:</p>
+<ul>
+<li>explain assumptions</li>
+<li>explain important decisions</li>
+<li>explain important details</li>
+<li>explain problems you're trying to solve</li>
+<li>explain problems you're trying to overcome in your program, etc</li>
+</ul>
+<p>Code tells you how, comments should tell you why.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.2-Variable-and-Print-Statement">
+<a class="anchor" href="#1.2-Variable-and-Print-Statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.2 Variable and Print Statement<a class="anchor-link" href="#1.2-Variable-and-Print-Statement"> </a>
+</h3>
+<p><strong>Variable</strong>: A name that is used to denote something or a value is called a variable. In python, variables can be declared and values can be assigned to it.</p>
+<p>We use a single equals sign to assign labels to variables. Let's see a few examples of how we can do thi</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variables and assignment</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"parrotai"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span><span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To know the type of variable use <strong>type()</strong> function</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Choosing-a-variable-name:">
+<a class="anchor" href="#Choosing-a-variable-name:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Choosing a variable name:<a class="anchor-link" href="#Choosing-a-variable-name:"> </a>
+</h3>
+<p>The names you use when creating these labels need to follow a few rules:</p>
+<ol>
+<li>Names can not start with a number.</li>
+<li>There can be no spaces in the name, use _ instead.</li>
+<li>Can't use any of these symbols :'",&lt;&gt;/?|()!@#$%^&amp;*~-+</li>
+<li>It's considered best practice (PEP8) that the names are lowercase.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Print Statements</strong></p>
+<p>The <strong>print</strong> statement can be used in the following different ways :</p>
+
+<pre><code>- print(variable_name)
+- print("Hello World")
+- print ("Hello", &lt;Variable &gt;)
+- print ("Hello" + &lt;Variable Containing the String&gt;)
+- print ("Hello %s" % &lt;variable containing the string&gt;)
+- print ("Hello" + &lt;Variable Containing the String&gt;)
+- print ("Hello %d" % &lt;variable containing integer datatype&gt;)
+- print ("Hello %f" % &lt;variable containing float datatype&gt;)</code></pre>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">acc</span> <span class="o">=</span> <span class="mi">89</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="mf">60.20</span>
+<span class="n">model</span> <span class="o">=</span> <span class="s2">"Random Forest"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The perfomance results for  </span><span class="si">%s</span><span class="s2"> model: Accuracy: </span><span class="si">%d</span><span class="s2"> ; F-score: </span><span class="si">%.3f</span><span class="s2">"</span> <span class="o">%</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">fs</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Alternatively you can use <strong>.format()</strong> in print function</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The perfomance results for  </span><span class="si">{0}</span><span class="s2"> model: Accuracy: </span><span class="si">{1}</span><span class="s2"> ; F-score: </span><span class="si">{2}</span><span class="s2">"</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">fs</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The perfomance results for  </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> model: Accuracy: </span><span class="si">{</span><span class="n">acc</span><span class="si">}</span><span class="s2"> ; F-score: </span><span class="si">{</span><span class="n">fs</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-success">
+    <b>Activity 1</b>: Write a program that prints your full name and your birthdate as separate strings.
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DO IT HERE </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="User-Input">
+<a class="anchor" href="#User-Input" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Input<a class="anchor-link" href="#User-Input"> </a>
+</h4>
+<p><code>input( )</code> accepts input and stores it as a string. Hence, if the user inputs a integer, the code should convert the string to an integer and then proceed...</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Type something here and it will be stored in this variable </span><span class="se">\t</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can convert the enterd number to <em>int</em>, using <strong>int()</strong> function to float with <strong>foat()</strong> function as follows:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span>  <span class="o">=</span>  <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Only integer can be stored in this variable </span><span class="se">\t</span><span class="s2">"</span><span class="p">))</span>
+<span class="n">b</span>  <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Only float can be stored in this variable </span><span class="se">\t</span><span class="s2">"</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.3-Operators-and-Expressions">
+<a class="anchor" href="#1.3-Operators-and-Expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3 Operators and Expressions<a class="anchor-link" href="#1.3-Operators-and-Expressions"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Numeric-operator">
+<a class="anchor" href="#Numeric-operator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Numeric operator<a class="anchor-link" href="#Numeric-operator"> </a>
+</h4>
+<ul>
+<li>
+<code>+</code> (plus) : 2 + 1 =3</li>
+<li>
+<code>-</code>  (minus): : 2 - 1 =1</li>
+<li>
+<code>*</code> (multiply): 2*1 =2</li>
+<li>
+<code>**</code> (power): 3**2 =9</li>
+<li>
+<code>/</code> (divide):  3/2 =1.5</li>
+<li>
+<code>//</code> (divide and floor): 3//2 =1</li>
+<li>
+<code>%</code> (modulo)" 5%3=2</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">6.0</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">20</span><span class="o">%</span><span class="k">6</span>)
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Logical-operators">
+<a class="anchor" href="#Logical-operators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logical operators<a class="anchor-link" href="#Logical-operators"> </a>
+</h3>
+<ul>
+<li>
+<code>==</code> (equal to)) : Compares if the objects are equal</li>
+<li>
+<code>!=</code> (not equal to): : Compares if the objects are not equal</li>
+<li>
+<code>not</code> : (boolean NOT)</li>
+<li>
+<code>and</code> (boolean AND)</li>
+<li>
+<code>or</code> (boolean OR)</li>
+<li>
+<code>&gt;</code> (greater than): Returns whether x is greater than y</li>
+<li>
+<code>&lt;</code> (less than): Returns whether x is less than y. </li>
+<li>
+<code>&lt;=</code> (less than or equal to)</li>
+<li>
+<code>&gt;=</code> (greater than or equal to)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-success">
+    <b>Activity 2</b>: Suppose you have $20,000$ tsh, which you can invest with a $10$ % return each year. Write python code to calculate how much money you end up with after $5$ years.
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.4-Control-Flow">
+<a class="anchor" href="#1.4-Control-Flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.4 Control Flow<a class="anchor-link" href="#1.4-Control-Flow"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Indentation">
+<a class="anchor" href="#Indentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Indentation<a class="anchor-link" href="#Indentation"> </a>
+</h3>
+<p>It is important to keep a good understanding of how indentation works in Python to maintain the structure and order of your code. We will touch on this topic again when we start building out functions!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="IF-statement">
+<a class="anchor" href="#IF-statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>IF statement<a class="anchor-link" href="#IF-statement"> </a>
+</h3>
+<p>The if statement is used to check a condition: if the condition is true, we run a block of statements (called the if-block), else we process another block of statements (called the else-block). The else clause is optional.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>if</strong></p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">some_condition</span><span class="p">:</span>
+    <span class="n">algorithm</span>
+</pre></div>
+<p><strong>If-else</strong></p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">some_condition</span><span class="p">:</span>
+       <span class="n">algorithm</span>
+   <span class="k">else</span><span class="p">:</span>
+      <span class="n">algorithm</span>
+</pre></div>
+<p><strong>if-elif (nested if)</strong></p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">some_condition</span><span class="p">:</span>
+      <span class="n">algorithm</span>
+   <span class="k">elif</span> <span class="n">some_condition</span><span class="p">:</span>
+      <span class="n">algorithm</span>
+   <span class="k">else</span><span class="p">:</span>
+     <span class="n">algorithm</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example avoid division by zero</span>
+<span class="n">val</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">val</span> <span class="o">+=</span> <span class="mf">2e-07</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">num</span> <span class="o">/</span> <span class="n">val</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2"> dived </span><span class="si">{1:.2f}</span><span class="s2"> = </span><span class="si">{2:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example avoid division by zero</span>
+<span class="n">user_name</span> <span class="o">=</span> <span class="s2">"sambaiga"</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s2">"sa1254"</span>
+<span class="k">if</span> <span class="n">user_name</span><span class="o">==</span><span class="s2">"sambaiga"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello "</span><span class="p">,</span><span class="n">user_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="o">!=</span><span class="s2">"sa1234"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Wrong password"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Access granted"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"user does not exist"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unlike other languages, indentation is significant</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">'a is greater than 10'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">15</span><span class="p">:</span>
+        <span class="nb">print</span>  <span class="p">(</span><span class="s1">'a is also at least 15'</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">'a is greater than 5 but not greater than 10'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">'no condition matched'</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">'so a is 5 or less'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="While--statement">
+<a class="anchor" href="#While--statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>While  statement<a class="anchor-link" href="#While--statement"> </a>
+</h3>
+<p>The while statement allows you to repeatedly execute a block of statements as long as a condition is true.</p>
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">some_condition</span><span class="p">:</span>
+      <span class="n">algorithm</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The square root of </span><span class="si">{0}</span><span class="s2"> is </span><span class="si">{1}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Loops">
+<a class="anchor" href="#For-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loops<a class="anchor-link" href="#For-Loops"> </a>
+</h3>
+<p>A for loop acts as an iterator in Python, it goes through items that are in a sequence or any other iterable item. We will see more about sequences in detail in later section.</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">something</span><span class="p">:</span>
+       <span class="n">algorithm</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Note</strong> 
+<strong>range( )</strong> function outputs the integers of the specified range. It can also be used to generate a series by specifying the difference between the two numbers within a particular range. The elements are returned in a list.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Example:">
+<a class="anchor" href="#Example:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example:<a class="anchor-link" href="#Example:"> </a>
+</h5>
+<p>Another common idea during a for loop is keeping some sort of running tally during the multiple loops. For example, lets create a for loop that sums up the list of number from 0 to 9:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">num_sum</span> <span class="o">+=</span><span class="n">num</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">num_sum</span><span class="p">)</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-success">
+    <b>Activity 3</b>: Compute $$\sum_{k=1}^N \frac{1}{2^k}$$ for N = 10, N = 20 and N = 100. What happens when n gets larger and larger?
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="The-break-and-continue-Statement">
+<a class="anchor" href="#The-break-and-continue-Statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>The break and continue Statement<a class="anchor-link" href="#The-break-and-continue-Statement"> </a>
+</h4>
+<ul>
+<li>
+<p>The <code>break</code> statement is used to break out of a loop statement i.e. stop the execution of a looping statement, even if the loop condition has not become False or the sequence of items has not been completely iterated over.</p>
+</li>
+<li>
+<p>The <code>continue</code> statement is used to tell Python to skip the rest of the statements in the current loop block and to continue to the next iteration of the loop.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Enter something : '</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="k">2</span> == 0:
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'The number is even'</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="c1">#print('Input is of sufficient length')</span>
+    <span class="c1"># Do other kinds of processing here...</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Progress-bar">
+<a class="anchor" href="#Progress-bar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Progress bar<a class="anchor-link" href="#Progress-bar"> </a>
+</h3>
+<p>Make your loops show a smart progress meter</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tqdm</span>
+<span class="kn">from</span>  <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span> <span class="k">as</span> <span class="n">pbar</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_of_n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mf">1e10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pbar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10000000</span><span class="p">)):</span>
+    <span class="n">sum_of_n</span><span class="o">+=</span><span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_n</span><span class="p">)</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.5-Data-Structures:">
+<a class="anchor" href="#1.5-Data-Structures:" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5 Data Structures:<a class="anchor-link" href="#1.5-Data-Structures:"> </a>
+</h3>
+<p>Are structures which can hold some data together, used to store a collection of related data.</p>
+<h4 id="1.5.1-Sequences">
+<a class="anchor" href="#1.5.1-Sequences" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5.1 Sequences<a class="anchor-link" href="#1.5.1-Sequences"> </a>
+</h4>
+<p>Sequence Types:There are three basic sequence types: lists, tuples, and range objects.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lists">
+<a class="anchor" href="#Lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists<a class="anchor-link" href="#Lists"> </a>
+</h3>
+<ul>
+<li>create list</li>
+<li>add item to list</li>
+<li>access elements of a list</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#name, gender, height, age, weight, region, status</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"James John"</span><span class="p">,</span> <span class="s2">"M"</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="s2">"Dodoma"</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#what about </span>
+<span class="c1">#data[-1]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"350K"</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># access all elements in a list</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="List-comprehensions">
+<a class="anchor" href="#List-comprehensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>List comprehensions<a class="anchor-link" href="#List-comprehensions"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create list of square of number from 1 to 10</span>
+<span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### alternatively</span>
+<span class="n">square</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="n">square</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+<span class="n">square</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## size of a list</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://docs.python.org/3.6/tutorial/datastructures.html#more-on-lists">More list methods</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert alert-success">
+<b>Activity 4</b>:
+Build a list that contains every prime number between 1 and 100, in two different ways: 
+1.  Using for loops and conditional if statements.
+2.  Using a list comprehension. 
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## CODE HERE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Tuples">
+<a class="anchor" href="#Tuples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tuples<a class="anchor-link" href="#Tuples"> </a>
+</h3>
+<p>A tuple consists of a number of values separated by commas, for instance:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'parrot'</span>
+<span class="n">t</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(2, 5, 'parrot')</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As you see, on output tuples are always enclosed in parentheses</p>
+<p>Though tuples may seem similar to lists, they are often used in different situations and for different purposes.</p>
+<ul>
+<li>Tuples are <a href="https://docs.python.org/3.6/glossary.html#term-immutable">immutable</a>, and usually contain a heterogeneous sequence of elements are accessed via unpacking.</li>
+<li>Lists are <a href="https://docs.python.org/3.6/glossary.html#term-immutable">mutable</a>, and their elements are usually homogeneous and are accessed by iterating over the list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The statement <code>t = 2, 5, 'parrot'</code> is an example of tuple packing: the values 2, 5, 'parrot are packed together in a tuple. The reverse operation is also possible:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Range">
+<a class="anchor" href="#Range" aria-hidden="true"><span class="octicon octicon-link"></span></a>Range<a class="anchor-link" href="#Range"> </a>
+</h3>
+<p>The range type represents an immutable sequence of numbers and is commonly used for looping a specific number of times in for loops.</p>
+<p>syntax: <code>range(start, stop, step)</code></p>
+<ul>
+<li>start: The value of the start parameter (or 0 if the parameter was not supplied)</li>
+<li>stop: The value of the stop parameter</li>
+<li>step: The value of the step parameter (or 1 if the parameter was not supplied)</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Common-Sequence-Operations">
+<a class="anchor" href="#Common-Sequence-Operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Common Sequence Operations<a class="anchor-link" href="#Common-Sequence-Operations"> </a>
+</h4>
+<p>The following operations  are supported by most sequence types, both mutable and immutable.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<code>x in s</code>: True if an item of s is equal to x, else False</li>
+<li>
+<code>x not in s</code>: False if an item of s is equal to x, else True</li>
+<li>
+<code>s + t</code> :the concatenation of s and t</li>
+<li>
+<code>s * n or n * s</code>: equivalent to adding s to itself n times</li>
+<li>
+<code>len(s)</code>: length of s</li>
+<li>
+<code>min(s)</code>: smallest item of s</li>
+<li>
+<code>max(s)</code>: largest item of s</li>
+<li>
+<code>s.count(x)</code>: total number of occurrences of x in s</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Important-python-function">
+<a class="anchor" href="#Important-python-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important python function<a class="anchor-link" href="#Important-python-function"> </a>
+</h3>
+<ul>
+<li>To loop over two or more sequences at the same time, the entries can be paired with the <code>zip()</code> function.</li>
+<li>When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the <code>enumerate()</code> function.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Mon'</span><span class="p">,</span> <span class="s1">'Tue'</span><span class="p">,</span> <span class="s1">'Wed'</span><span class="p">,</span> <span class="s1">'Thus'</span><span class="p">,</span> <span class="s1">'Fr'</span><span class="p">,</span> <span class="s2">"Sat"</span><span class="p">,</span> <span class="s1">'Sun'</span><span class="p">]</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Jan'</span><span class="p">,</span> <span class="s1">'Feb'</span><span class="p">,</span> <span class="s1">'March'</span><span class="p">,</span> <span class="s1">'Apr'</span><span class="p">,</span> <span class="s1">'May'</span><span class="p">,</span> <span class="s2">"Jun"</span><span class="p">,</span> <span class="s1">'July'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## enumerate:</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">days</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'index </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## enumerate:</span>
+<span class="k">for</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">months</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1.5.2-Dictionary">
+<a class="anchor" href="#1.5.2-Dictionary" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5.2 Dictionary<a class="anchor-link" href="#1.5.2-Dictionary"> </a>
+</h4>
+<p>We've been learning about sequences in Python but now we're going to switch gears and learn about mappings in Python. If you're familiar with other languages you can think of these Dictionaries as hash tables. Dictionaries are more used like a database because here you can index a particular sequence with your user defined string.</p>
+<p>Mappings are a collection of objects that are stored by a key, unlike a sequence that stored objects by their relative position. This is an important distinction, since mappings won't retain order since they have objects defined by a key.
+A Python dictionary consists of a key and then an associated value. That value can be almost any Python object.</p>
+<p>We create a dictionary with {} and : to signify a key and a value</p>
+<div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'key1'</span><span class="p">:</span><span class="s1">'value1'</span><span class="p">,</span><span class="s1">'key2'</span><span class="p">:</span><span class="s1">'value2'</span><span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create dictionary</span>
+<span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'name'</span><span class="p">:</span><span class="s2">"James John"</span><span class="p">,</span>
+    <span class="s1">'age'</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
+    <span class="s1">'gender'</span><span class="p">:</span><span class="s2">"M"</span><span class="p">,</span>
+    <span class="s1">'region'</span><span class="p">:</span><span class="s2">"Dodoma"</span><span class="p">,</span>
+    <span class="s1">'status'</span><span class="p">:</span><span class="mi">1</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'name': 'James John', 'age': 28, 'gender': 'M', 'region': 'Dodoma', 'status': 1}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">square</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)}</span>
+<span class="n">square</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Access value of element by key - most important feature!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="s1">'age'</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>28
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dic</span><span class="p">[</span><span class="s1">'salary'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"310K"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#get list keys of a dictionary</span>
+<span class="n">dic</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys(['name', 'age', 'gender', 'region', 'status'])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#get list values in a dictionary</span>
+<span class="n">dic</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_values(['James John', 28, 'M', 'Dodoma', 1])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#get list key, values pairs item in a dictionary</span>
+<span class="k">for</span> <span class="n">key</span> <span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2">: </span><span class="si">{1}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.6-Functions">
+<a class="anchor" href="#1.6-Functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.6 Functions<a class="anchor-link" href="#1.6-Functions"> </a>
+</h3>
+<p>Functions will be one of our main building blocks when we construct larger amounts of code to solve problems.</p>
+<ul>
+<li>
+<p>function is a useful device that groups together a set of statements so they can be run more than once. They can also let us specify parameters that can serve as inputs to the functions.</p>
+</li>
+<li>
+<p>functions allow us to not have to repeatedly write the same code again and again.</p>
+</li>
+<li>function in Python is defined by a <code>def</code> statement. The general syntax looks like this:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">name_of_function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    This is where the function's Document String (doc-string) goes</span>
+<span class="sd">    '''</span>
+    <span class="c1"># Do stuff here</span>
+    <span class="c1">#return desired result</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Note:-Docstrings:">
+<a class="anchor" href="#Note:-Docstrings:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note: Docstrings:<a class="anchor-link" href="#Note:-Docstrings:"> </a>
+</h4>
+<p>Documentation about what the function does and its parameters. General convention:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Normalization function</span>
+<span class="sd">    arguments:</span>
+<span class="sd">             data: the data value you want to normalize</span>
+<span class="sd">             mean: mean value of your data</span>
+<span class="sd">             std: standard deviation of your data</span>
+<span class="sd">    return:</span>
+<span class="sd">          z-score: normalized value   </span>
+<span class="sd">    '''</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span><span class="o">/</span> <span class="n">std</span>
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="mf">27.8</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Normalized value is </span><span class="si">{:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-success">
+    <b>Activity 5</b>:Write a function called accept login(users, username, password) with three parameters: users a dictionary of username
+keys and password values, username a string for a login name and password a string for a password. The function should return
+True if the user exists and the password is correct and False otherwise. Here is the calling code, test your code with both good
+and bad passwords as well as non-existent login names:
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## CODE HERE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert alert-success">
+<b>Activity 6</b>:
+The distance between two points x and y is the square root of the sum of squared differences along  each dimension of x and y. Create a function distance(x, y) that takes two vectors and outputs the 
+distance between them. Use your function to find the distance between (0,0) and (1,1).
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## CODE HERE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert alert-success">
+<b>Activity 7</b>: Using distance() function created in activity 6. Make a function in_circle(x, origin) that uses distance to determine if a two-dimensional point falls within the the unit circle with a given origin. That is, find if a two-dimensional point has distance $&lt;1$ from the origin (0,0).Use your function to print whether the point (1,1) lies within the unit circle centered at (0,0).
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## CODE HERE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lambda-Expressions">
+<a class="anchor" href="#Lambda-Expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lambda Expressions<a class="anchor-link" href="#Lambda-Expressions"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Small <strong>anonymous functions</strong> can be created with the <code>lambda</code> keyword. In Python, anonymous function means that a function is without a name.</p>
+<p>syntax: <code>lambda arguments: expression</code></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sq</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sq</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lambda functions can be used along with built-in functions like</p>
+<ul>
+<li>
+<code>filter()</code>: Construct an iterator from those elements of iterable for which function returns true, </li>
+<li>
+<code>map()</code>: Return an iterator that applies function to every item of iterable, yielding the results and </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example:">
+<a class="anchor" href="#Example:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example:<a class="anchor-link" href="#Example:"> </a>
+</h3>
+<p>Given list of ages for participants of AISG bootcamp = [10, 12, 22, 80, 50, 16, 33, 18, 17, 29]</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us filter out teenagers from this list</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">29</span><span class="p">]</span> 
+<span class="n">lf</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="mi">18</span>  <span class="ow">and</span> <span class="n">x</span><span class="o">&gt;=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">teenagers</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">lf</span> <span class="p">,</span> <span class="n">age</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">teenagers</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let use standarzide the list of age</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="n">mu</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="n">std</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="n">lf</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">round</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">std</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">standarzied_age</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">lf</span> <span class="p">,</span><span class="n">age</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">standarzied_age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.7-Module">
+<a class="anchor" href="#1.7-Module" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.7 Module<a class="anchor-link" href="#1.7-Module"> </a>
+</h3>
+<p>Modules are organized units (written as files) which contain functions, statements and other definitions.</p>
+<ul>
+<li>
+<p>Any file ending in <code>.py</code> is treated as a module (e.g., <code>my_function.py</code>, which names and defines a function <code>my_function</code>)</p>
+</li>
+<li>
+<p>Modules: own global names/functions so you can name things whatever you want there and not conflict with the names in other modules.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> normalizer.py
+<span class="k">def</span> <span class="nf">normal</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Normalization function</span>
+<span class="sd">    arguments:</span>
+<span class="sd">             data: the data value you want to normalize</span>
+<span class="sd">             mean: mean value of your data</span>
+<span class="sd">             std: standard deviation of your data</span>
+<span class="sd">    return:</span>
+<span class="sd">          z-score: normalized value   </span>
+<span class="sd">    '''</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span><span class="o">/</span> <span class="n">std</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Packages">
+<a class="anchor" href="#Packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packages<a class="anchor-link" href="#Packages"> </a>
+</h3>
+<ul>
+<li>Packages are name-spaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.</li>
+<li>Each package in Python is a directory which MUST contain a special file called <code>__init__.py.</code> This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To Import modules and packages</p>
+<p>Different options are available:</p>
+<ul>
+<li>
+<span style="color:green">import <i>package-name</i></span>  <p> importing all functionalities as such&lt;/li&gt;
+</p>
+</li>
+<li>
+<span style="color:green">from <i>package-name</i> import <i>specific function</i></span>  <p> importing a specific function or subset of the package/module&lt;/li&gt;
+</p>
+</li>
+<li>
+<span style="color:green">from <i>package-name</i> import *  </span>   <p> importing all definitions and actions of the package (sometimes better than option 1)&lt;/li&gt;
+</p>
+</li>
+<li>
+<span style="color:green">import <i>package-name</i> as <i>short-package-name</i></span>    <p> Very good way to keep a good insight in where you use what package&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    
+    
+</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">normalizer</span> 
+<span class="n">result</span> <span class="o">=</span> <span class="n">normalizer</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="mf">27.8</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Normalized value is </span><span class="si">{:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Alternatively</span>
+<span class="kn">from</span> <span class="nn">normalizer</span> <span class="kn">import</span> <span class="n">normal</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="mf">27.8</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Normalized value is </span><span class="si">{:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Import-modules-from-another-directory">
+<a class="anchor" href="#Import-modules-from-another-directory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import modules from another directory<a class="anchor-link" href="#Import-modules-from-another-directory"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'src/'</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">normalizer</span> <span class="k">as</span> <span class="nn">norm</span> 
+<span class="n">result</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="mf">27.8</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Normalized value is </span><span class="si">{:.2f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Important-python-module">
+<a class="anchor" href="#Important-python-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important python module<a class="anchor-link" href="#Important-python-module"> </a>
+</h3>
+<ul>
+<li>
+<a href="https://docs.python.org/3/library/statistics.html">statistics</a> — Mathematical statistics functions: This module provides functions for calculating mathematical statistics of numeric (Real-valued) data</li>
+<li>
+<a href="https://docs.python.org/3/library/math.html">math</a> — Mathematical functions: This module provides access to the mathematical functions defined by the C standard.</li>
+<li>
+<a href="https://docs.python.org/3/library/random.html">random</a>— Generate pseudo-random numbers:This module implements pseudo-random number generators for various distributions.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert alert-success">
+<b>Activity 8</b>:
+Using the math library, calculate and print the value of pi / 4.
+
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## CODE HERE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1">## Random Shuffle data in a list</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Random select element from a list</span>
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Return a k length list of unique elements chosen from the population sequence or set. Used for random sampling without replacement. </span>
+<span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert alert-success">
+<b>Activity 9</b>:
+Using random.uniform, create a function rand(n) that generates a single float between -n and n. Call rand() once. So we can check your solution, we will use random.seed to fix the value called 
+by your function.
+
+Note:  add random.seed(1) to fixes the value called by your function,
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">rand</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="c1">#code here</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert alert-success">
+<b>Activity 10</b>: Use the  rand function defined from  previous exercise to create a list x with 10000 number between -1 and 1
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## CODE HERE</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert alert-success">
+<b>Activity 11</b>: Use the in_circle are defined from previous exercise. Create a list of 10000 booleans called inside that are 
+True if and only if the point in x with that index falls within the unit circle. Make sure to use in_circle. Print the proportion of points within the circle. 
+This proportion is an estimate of the ratio of the two areas!
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1.7-Reading-and-Writing-Data-to-Files-in-Python">
+<a class="anchor" href="#1.7-Reading-and-Writing-Data-to-Files-in-Python" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.7 Reading and Writing Data to Files in Python<a class="anchor-link" href="#1.7-Reading-and-Writing-Data-to-Files-in-Python"> </a>
+</h4>
+<p>To read and write file in python  you must first open files in the appropriate mode and read its contents:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'data/sms.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">sms</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<code>open()</code> takes a filename and a mode as its arguments. </li>
+<li>
+<code>r</code> opens the file in read only mode. To write data to a file, pass in <code>w</code> as an argument instead:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sms</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'data/data.txt'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s1">'some data to be written to the file'</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-text-files-line-by-line-and-save-to-list">
+<a class="anchor" href="#Reading-text-files-line-by-line-and-save-to-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading text files line-by-line and save to list<a class="anchor-link" href="#Reading-text-files-line-by-line-and-save-to-list"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sms_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'data/sms.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">l</span><span class="o">=</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#removes any leading (spaces at the beginning) and trailing (spaces at the end) characters </span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>  <span class="c1"># The EOF char is an empty string</span>
+            <span class="n">sms_list</span><span class="o">+=</span><span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">l</span><span class="p">)]</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sms_list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sms_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">variance</span><span class="p">(</span><span class="n">sms_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">sms_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Directory-Listing">
+<a class="anchor" href="#Directory-Listing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directory Listing<a class="anchor-link" href="#Directory-Listing"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>os.listdir()</code> is the method to use to get a directory listing:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">dirs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">'data/'</span><span class="p">)</span>
+<span class="n">dirs</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>os.listdir() returns a Python list containing the names of the files and subdirectories in the directory given by the path argument.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In modern versions of Python, an alternative to <code>os.listdir()</code> is to use <code>os.scandir()</code> and <code>pathlib.Path()</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="s1">'data/'</span><span class="p">)</span> <span class="k">as</span> <span class="n">dirs</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">dirs</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'data/'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">dirs</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Making-Directories">
+<a class="anchor" href="#Making-Directories" aria-hidden="true"><span class="octicon octicon-link"></span></a>Making Directories<a class="anchor-link" href="#Making-Directories"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##check if path exist</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s2">"data/"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s2">"results/"</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">'results/'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise-1-:">
+<a class="anchor" href="#Exercise-1-:" aria-hidden="true"><span class="octicon octicon-link"></span></a><font color="green">Exercise 1</font> :<a class="anchor-link" href="#Exercise-1-:"> </a>
+</h3>
+<p>A list of numbers can be very unsmooth, meaning very high numbers can be right next to very low numbers. This list may represent a smooth path in reality that is masked with random noise.One way to smooth the values in the list is to replace each value with the average of each value's neighbors, including the value itself.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Write  a function <code>moving_window_average(x, n_neighbors)</code> that takes a list x and the number of neighbors <code>n_neighbors</code> on either side to consider. For each value, the function computes the average of each value's  neighbors, including themselves. Have the function return a list of these averaged values that is the same  length as the original list. If there are not enough neighbors (for cases near the edge), substitute the 
+original value as many times as there are missing neighbors. Use your function to find the moving window sum of sms list and n_neighbors=2.</li>
+<li>Compute the moving window average for sms_list for the range of n_neighbors 1-9. Store sms_list as well as each of these averages as consecutive lists in a list called sms_mva.</li>
+<li>For each list in sms_mva, calculate and store the range (the maximum minus the minimum) in two decimal places in a new list ranges. Print your answer. As the window width increases, does the range of each list increase or decrease? Why do you think that is?</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#solution 1</span>
+
+<span class="k">def</span> <span class="nf">moving_window_average</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="n">n_neighbors</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">*</span><span class="n">n_neighbors</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">*</span><span class="n">n_neighbors</span>
+    <span class="c1"># To complete the function,</span>
+    <span class="c1"># return a list of the mean of values from i to i+width for all values i from 0 to n-1.</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="n">width</span><span class="p">)])</span> <span class="o">/</span> <span class="n">width</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    
+    
+
+<span class="n">mv</span><span class="o">=</span><span class="n">moving_window_average</span><span class="p">(</span><span class="n">sms_list</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#sloution 2</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sms_list</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">moving_window_average</span><span class="p">(</span><span class="n">sms_list</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="p">)</span> <span class="k">for</span> <span class="n">n_neighbors</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#solution 3</span>
+<span class="n">ranges</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Y</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ranges</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="References">
+<a class="anchor" href="#References" aria-hidden="true"><span class="octicon octicon-link"></span></a>References<a class="anchor-link" href="#References"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">
+<a class="anchor" href="#References" aria-hidden="true"><span class="octicon octicon-link"></span></a>References<a class="anchor-link" href="#References"> </a>
+</h2>
+<ul>
+<li><a href="https://github.com/pythontz/python4datascience-atc">python4datascience-atc</a></li>
+<li><a href="https://github.com/jakevdp/PythonDataScienceHandbook">PythonDataScienceHandbook</a></li>
+<li><a href="https://github.com/jorisvandenbossche/DS-python-data-analysis">DS-python-data-analysis</a></li>
+<li><a href="https://realpython.com/working-with-files-in-python/">Working With Files in Python</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+&lt;/div&gt;
+ 
+
+</li>
+</ul>
+</div>
+</div></div>
+</div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="sambaiga/sambaiga"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/python/2019/04/01/python-basics.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer">
+
+  <div class="wrapper">
+<div class="wrapper">
+     Copyright 2020 
+    
+    
+    : sambaiga@gmail.com
+  </div>
+
+  </div>
+</footer>
+
+
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/common.js"></script>
+
+<script>
+  $("script[type='math/tex']").replaceWith(function() {
+      var tex = $(this).text();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(function() {
+      var tex = $(this).html();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
+</script>
+
+
+</body>
+
+</html>
