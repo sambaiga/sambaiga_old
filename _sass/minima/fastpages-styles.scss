@@ -11,7 +11,7 @@ $dt-purple: #bd93f9;
 $dt-red: #ff5555;
 $dt-yellow: #f1fa8c;
 $dt-green-light: rgb(172, 229, 145);
-$brand-color:      #d33682;
+
 
 .post img {
         display: block;
@@ -55,7 +55,7 @@ $brand-color:      #d33682;
         background: #323443 !important;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
-        font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace;
+        //font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace;
         border-radius: 5px;
         font-size: 100%;
 }
@@ -78,7 +78,7 @@ $brand-color:      #d33682;
 .page-content {
         -webkit-font-smoothing: antialiased !important;
         text-rendering: optimizeLegibility !important;
-        font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
+        //font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
 }
 
 // make non-headings slightly lighter
@@ -445,4 +445,49 @@ table {
 }
 ::-webkit-scrollbar-corner {
   background-color: transparent;
+}
+
+
+.profile {
+  img {
+      box-shadow: 0 0 5px $dt-gray;
+      width: 100%;
+  }
+}
+.address {
+  font-family: monospace;
+
+  p { margin: 0; }
+}
+
+.news {
+  border-top: 1px solid $dt-gray-light;
+  margin-top: 30px;
+  padding-top: 20px;
+
+  h2 {
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 10px;
+  }
+  table {
+      border-collapse: collapse;
+      width: 100%;
+
+      .date { width: 19%; }
+      .announcement { width: 81%; }
+
+      tr { text-align: left; }
+      td {
+          padding: 6px 0;
+          vertical-align: top;
+          border: none;
+      }
+  }
+}
+
+.social {
+  border-top: 1px solid $dt-gray-light;
+  margin-top: 50px;
+  padding-top: 20px;
 }
