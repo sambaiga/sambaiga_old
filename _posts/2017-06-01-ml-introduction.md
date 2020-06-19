@@ -6,7 +6,7 @@ toc: true
 comments: true
 layout: post
 categories: [Machine learning]
-image: images/post/ml_intro.jpg
+image: images/post/ml_into.jpg
 author: Anthony Faustine
 ---
 
