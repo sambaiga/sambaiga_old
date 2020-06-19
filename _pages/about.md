@@ -1,10 +1,8 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
 ---
-
-![]({{ site.baseurl }}/images/banner_small.png)
 
 **Anthony Faustine**  is a [Data Scientist at CeADAR (UCD), Dublin, Ireland](https://www.ceadar.ie/) with over four years of successful experience in data analytics and Artificial Intelligence techniques for multiple applications. He effectively researches techniques for novel approaches to problems and develops prototypes to assess their viability. Although Anthony is a person who takes the initiative, he has a strong team-work spirit with experience of working in a highly international environment. 
 
@@ -14,4 +12,4 @@ At CeADER, Anthony is devising and implementing data analytics/AI technical solu
 
 In 2017, Anthony joined IDLab, imec research group of the University of Ghent, in Belgium as a Ph.D. Machine learning researcher advised by [Tom Dhaene](http://sumo.intec.ugent.be/?q=tdhaene) and [Dirk Deschrijver](http://sumo.intec.ugent.be/members?q=ddeschrijver). His research focused on machine learning techniques applied to energy smart-meter data. He develops methods to identify active appliances and extract their corresponding power consumption from aggregate power [(energy-disaggregation)](https://en.wikipedia.org/wiki/Nonintrusive_load_monitoring) in residential and industrial buildings. 
 
-His research interests lie in the intersections between Computational Sustainability and Artificial Intelligence. He works towards bridging the gap between laboratory and real-world applicability of machine learning for sustainable development.
+His research interests lie in the intersections between Computational Sustainability and Artificial Intelligence. He works towards bridging the gap between research and real-world applicability of machine learning for sustainable development.

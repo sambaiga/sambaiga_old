@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% if site.paginate %}
+{% assign posts = paginator.posts %}
+{% else %}
+{% assign posts = site.talks %}
+{% endif %}
+
+
+
+<ul class="post-list">
+    {% for post in site.talks reversed %}
+ 
+    <li>
+        {% include talk-li.html %}
+    </li>
+  
+    {% endfor %}
+
+</ul>
+
