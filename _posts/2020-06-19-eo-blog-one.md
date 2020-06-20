@@ -1,7 +1,7 @@
 ---
 title: "AI4EO-An Opportunity for Computation Sustainability"
 description: This post introduces how Earth Observation (EO)  and Artificial Intelligence (AI) could be used for Computational Sustainability.
-toc: true
+toc: false
 comments: true
 layout: post
 categories: [Machine learning, Deep learning,  Eearth observation]
