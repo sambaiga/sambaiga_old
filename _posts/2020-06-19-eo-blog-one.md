@@ -12,8 +12,10 @@ author: Anthony Faustine & Shridhar Kulkarni
 ## Introduction
 
 Computational Sustainability focuses on developing computational models, methods, and tools to help policymakers design more effective solutions and policies for sustainable development. The advancement of Information and Communication Technologies (ICT), particularly Earth Observation (EO) and Artificial intelligence (AI) offer prospects of addressing sustainability challenges.A more in-depth explanation about the above project can be viewed in this video:
+A more in-depth explanation about the above project can be viewed in this video:
 
-{% include youtube.html content="https://www.youtube.com/watch?v=vDC5T9Wvgeo" %}
+{% include youtube.html content="https://youtu.be/Ll50l3fsoYs" %}
+
 Earth observations (EO) are data and information about the planet’s physical, chemical, and biological systems.  It involves the collection, analysis, and presentation about the status of, and changes in, the natural and human-made environment. The most common sources of EO data include drones,  land stations, and satellites. While drones capture high-resolution images on a small scale, satellites generate growing amounts of multi-resolution and multi-bands imagery and other data sources for the whole Earth. These data could be used to create all kinds of different products so that scientists, policymakers, and even everyday citizens can understand the past, present, and future trends in the Earth systems. Figure [below](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/raster-bands.htm) shows multiband imagery from satellites by the electromagnetic 
 
 ![]({{ site.baseurl }}/images/eo-posts/Multispectral_bands.png) 
@@ -63,7 +65,7 @@ The [Spacenet](https://spacenet.ai/datasets/), on the other hand, provides acces
 
 [Kaggle](https://www.kaggle.com), a world's largest data science community with powerful tools and resources, is another source of EO training datasets which host several machine learning challenges EO imagery. This challenges includes [Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection), [Airbus Ship Detection Challenge](https://www.kaggle.com/c/airbus-ship-detection) and [Draper Satellite Image Chronology](https://www.kaggle.com/c/draper-satellite-image-chronology) to mention a few.
 
-![]({{ site.baseurl }}/images/eo-posts/Ai_ready.png)
+![]({{ site.baseurl }}/images/eo-posts/ai_ready.png)
 
 
 ### API for accessing EO imager data.
