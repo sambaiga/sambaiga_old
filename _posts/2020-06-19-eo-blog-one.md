@@ -16,16 +16,18 @@ Computational Sustainability focuses on developing computational models, methods
 {% include youtube.html content="https://www.youtube.com/watch?v=vDC5T9Wvgeo" %}
 Earth observations (EO) are data and information about the planet’s physical, chemical, and biological systems.  It involves the collection, analysis, and presentation about the status of, and changes in, the natural and human-made environment. The most common sources of EO data include drones,  land stations, and satellites. While drones capture high-resolution images on a small scale, satellites generate growing amounts of multi-resolution and multi-bands imagery and other data sources for the whole Earth. These data could be used to create all kinds of different products so that scientists, policymakers, and even everyday citizens can understand the past, present, and future trends in the Earth systems. Figure [below](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/raster-bands.htm) shows multiband imagery from satellites by the electromagnetic 
 
-![](images/Multispectral_bands.png) 
+![]({{ site.baseurl }}/images/eo-posts/Multispectral_bands.png) 
 
 
 On the other hand, AI is an area of computer science devoted to developing systems that can learn (from data) to make decisions and predictions within specific contexts. Indeed, AI technology can extract more in-depth insights from datasets than other techniques. Over recently, AI has been used with success in solving complex problems in several domains such as machine translation, computer vision, autonomous cars, to mention a few. Machine learning and specifically, computer vision models provide explicitly useful and practical approaches for analyzing and extracting relevant information from EO imagery data. Recently deep learning models and specifically Convolution Neural Networks (CNNs) have proven effective in several computer vision tasks such as object detection, classification, and video processing, image generations, and image captioning, to mention a few. These models could be applied to detect and classify objects from complex EO imagery at a larger scale. Figure 2 presents AI capability for object detection and using computer vision techniques for multiband satellite images. This image has been taken from [here](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/raster-bands.htm)).
 
-![](images/EO_AI.png)
+![]({{ site.baseurl }}/images/eo-posts/EO_AI.png)
+
 
 Applying these techniques to EO data will make it easy to efficiently automate the recognition of known and unknown patterns at large-scale. This is likely to reveal useful insights and opportunities for addressing sustainability challenges. For example, AI models could be applied to perform automated change detection, crop mapping, and yield estimation from high-resolution imagery in a larger-scale. The fusion of EO data and other data sources such as geo-referenced, demographics, and social-network data can be used to facilitate the more targeted developmental challenge. For instance, it has been demonstrated that the AI model can be used to predict the poverty level by analyzing satellite imagery, night lights, and demographic data.  Figure below shows the different application domains of EO.Image has been taken from [here](https://www.sentinel-hub.com/) and [here](https://www.agrilinks.org/post/enhancing-earth-observation-solutions-agriculture-machine-learning)
 
-![](images/Applications_2.png)             
+![]({{ site.baseurl }}/images/eo-posts/Applications_2.png)
+     
 
 
 ##  EO data sources
@@ -50,7 +52,8 @@ The [DigitalGlobe](https://www.digitalglobe.com/) is similar to Planet Labs and 
 
 On the other hand, the Airbus, with Pleiades and SPOT missions, provide very high-resolution multispectral twin satellites with 0.5 meters and 1.5-meter resolution, respectively. These imagery data are particularly suitable for emergency response and up-to daily change detection.
 
-![](images/Satellites_commrcial_coopernicus.png) 
+![]({{ site.baseurl }}/images/eo-posts/Satellites_commrcial_coopernicus.png)
+
 
 
 ### AI ready EO datasets
@@ -60,7 +63,8 @@ The [Spacenet](https://spacenet.ai/datasets/), on the other hand, provides acces
 
 [Kaggle](https://www.kaggle.com), a world's largest data science community with powerful tools and resources, is another source of EO training datasets which host several machine learning challenges EO imagery. This challenges includes [Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection), [Airbus Ship Detection Challenge](https://www.kaggle.com/c/airbus-ship-detection) and [Draper Satellite Image Chronology](https://www.kaggle.com/c/draper-satellite-image-chronology) to mention a few.
 
-![](images/Ai_ready.png) 
+![]({{ site.baseurl }}/images/eo-posts/Ai_ready.png)
+
 
 ### API for accessing EO imager data.
 
@@ -72,8 +76,8 @@ Despite the availability of free and commercial satellite imagery, it is somehow
 ## Opportunity and Challenges of AI4EO
 
 Machine learning, precisely computer vision, can be applied to EO imagery data for multimodal semantic segmentation, detecting objects,  detecting changes from a time series satellite image or image retrieval. The computer vision model can automatically generate semantic maps of a large area from EO data [[Audebert2017a]](https://www.sciencedirect.com/science/article/pii/S0924271617301818). The resulting semantic maps can be used for the cartography of urban areas or to determine land use cover at a massive scale. In change detection, machine learning models could be used to extend the semantic analysis of EO data by incorporating the multi-temporal dimension. This enables us to track changes around the globe or monitor activity in high-revisit rate acquisitions. It also plays an essential role in the production of maps depicting the evolutions of land use, urban coverage, deforestation, and other multi-temporal type analysis. The image retrieval aims to retrieve images with similar visual contents with respect to the query image from a database. 
-![](images/change_detection.png "a) Semantic segmentation b) End-to-end change detection.(This image has been taken from [1](https://www.mdpi.com/2072-4292/11/11/1382)and [2](https://www.mdpi.com/2072-4292/8/4/329/htm)")            
 
+![]({{ site.baseurl }}/images/change_detection.png)
 
 Even though AI provides a potential application to EO, several challenges need to be addressed to successfully exploits AI potentials.  This is because compared to other types of Data, EO  present several challenges for machine learning algorithms: 
 First, the EO data is multimodal and high dimensional. For instance, the EO satellite data come from a variety of sensors types such as passive sensors (RBGN), active sensors (Synthetic Aperture Radar (SAR)), near-infrared sensors. The data also contain additional geo-related data like weather, geo-physical or biochemical quantities and other derived products. This data variety raises the following fundamental challenges when applied to the machine learning model: *how to combine all these data types (data fusion) since all these sources provide complementary information that should be used jointly to maximize the model's performance.  As a  result, there is a need to develop novel machine learning models that match EO data taken from different sources with different imaging modalities. Modifying existing vision-based deep networks to these data is not trivial, as this requires to work with new data structures that do not share the same underlying physical and numerical properties. Other exciting topics could be investigating the transferability of deep learning networks to [EO imaging modalities] (https://ieeexplore.ieee.org/document/8113128). Among the other challenges are the sheer number of pixels and the geographic extent per image. For example, a single DigitalGlobe satellite image encompasses > 64 km2 and over 250 million pixels. Also, the objects of interest are microscopic, which complicates traditional computer vision techniques. 
