@@ -41,8 +41,12 @@ There are many EO data sources made available recently. These data sources offer
 The EO puplic data providers are public service framework that allows full, free and open access to all data collected. [Copernicus](https://www.copernicus.eu/en/about-copernicus) and [Landsat](https://landsat.gsfc.nasa.gov/about/) are the famous and largest public satellite data providers. 
 Landsat s one of the world's largest satellite image providers. It is a joint program of the National Aeronautics and Space Administration (NASA) and the United States Geological Survey (USGS). It provides access to satellites of the Landsat family, which have access over the archival of 50 years of earth data. Landsat satellites collect data on the forests, farms, urban areas, and water sources, generating the longest continuous record. The freely available information is used to understand environmental change better, [manage agricultural practices](https://landsat.gsfc.nasa.gov/how_landsat_helps/agriculture/), [allocate scarce water resources](https://landsat.gsfc.nasa.gov/how_landsat_helps/water), [monitor the extent and health of forests](https://landsat.gsfc.nasa.gov/how_landsat_helps/forest-management/) and respond to natural disasters, and more. Data can be accessed using LandsLook Viewer, USGS GloVis, Earth Explorer, Free Web-Enabled Landsat Data (WELD). More information is available [here](https://landsat.gsfc.nasa.gov/data/where-to-get-data/).
 
+{% include youtube.html content="https://youtu.be/Ezn1ne2Fj6Y" %}
+
 Copernicus is managed by the Europe Unions EO program and collect data from a constellation of 6 families of satellites, known as Sentinels. Each Sentinel mission focuses on different but interrelated aspects of EO, including [Atmospheric monitoring (Sentinels 4 and 5)](http://atmosphere.copernicus.eu), [Marine environment monitoring (Sentinel-3)](http://marine.copernicus.eu), [Land monitoring (Sentinel-2)](http://land.copernicus.eu), [Climate Change](http://climate.copernicus.eu) and [Emergency management](http://emergency.copernicus.eu). Currently Copernicus produces 12 terabytes per day of data for the 6 families of satellites, known as "Sentinels." The data are  open access and can be freely downloaded using [Copernicus Open Access Hub]. A summary of Copernicus program can found  in this video
+
 {% include youtube.html content="https://youtu.be/MGJss4lDaBo" %}
+
 
 **Commercial data providers**
 
@@ -54,7 +58,6 @@ The [DigitalGlobe](https://www.digitalglobe.com/) is similar to Planet Labs and 
 
 On the other hand, the Airbus, with Pleiades and SPOT missions, provide very high-resolution multispectral twin satellites with 0.5 meters and 1.5-meter resolution, respectively. These imagery data are particularly suitable for emergency response and up-to daily change detection.
 
-![]({{ site.baseurl }}/images/eo-posts/Satellites_commrcial_coopernicus.png)
 
 
 
@@ -68,7 +71,7 @@ The [Spacenet](https://spacenet.ai/datasets/), on the other hand, provides acces
 ![]({{ site.baseurl }}/images/eo-posts/ai_ready.png)
 
 
-### API for accessing EO imager data.
+### API for accessing EO  data.
 
 Despite the availability of free and commercial satellite imagery, it is somehow challenging to directly download  and use these data.  Accessing these data requires one to have expertise in satellite imagery. Several API solutions that make it easy to access, download, and use satellite imagery from different sources have been developed to address these challenges. Sentinel Hub API is one of the easily available data API. 
 
@@ -84,7 +87,7 @@ Machine learning, precisely computer vision, can be applied to EO imagery data f
 
 Even though AI provides a potential application to EO, several challenges need to be addressed to successfully exploits AI potentials.  This is because compared to other types of Data, EO  present several challenges for machine learning algorithms. The following video discuss some of the opportunities and challenges of machine learning for EO.
 {% include youtube.html content="https://youtu.be/5PNnPagENxQ" %}
- 
+
 First, the EO data is multimodal and high dimensional. For instance, the EO satellite data come from a variety of sensors types such as passive sensors (RBGN), active sensors (Synthetic Aperture Radar (SAR)), near-infrared sensors. The data also contain additional geo-related data like weather, geo-physical or biochemical quantities and other derived products. This data variety raises the following fundamental challenges when applied to the machine learning model: *how to combine all these data types (data fusion) since all these sources provide complementary information that should be used jointly to maximize the model's performance.  As a  result, there is a need to develop novel machine learning models that match EO data taken from different sources with different imaging modalities. Modifying existing vision-based deep networks to these data is not trivial, as this requires to work with new data structures that do not share the same underlying physical and numerical properties. Other exciting topics could be investigating the transferability of deep learning networks to [EO imaging modalities] (https://ieeexplore.ieee.org/document/8113128). Among the other challenges are the sheer number of pixels and the geographic extent per image. For example, a single DigitalGlobe satellite image encompasses > 64 km2 and over 250 million pixels. Also, the objects of interest are microscopic, which complicates traditional computer vision techniques. 
 
 The size of EO data is increasing at an exponential rate demanding automation, massive computing, and machine learning algorithms that are fast enough and sufficiently transferrable to be applied for the whole earth's surface. Besides,  these data contain plenty of unlabelled data, making it challenging to use well-established supervised machine learning techniques. Yet this provides an opportunity to explore the recent progress in semi-supervised learning, [self-supervised](https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html) and active-learning methods for EO application. Furthermore, the existence of meta-data and other geo-referenced data such as the Open-street map (OSM) provides an opportunity for creating annotated satellite imagery data for machine learning algorithms.
