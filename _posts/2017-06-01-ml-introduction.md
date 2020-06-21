@@ -154,7 +154,7 @@ In python, this result can be implemented as follows:
 
 ```python
 def direct method(x, t):
- '"
+'''
  Solve linear regression exactly. (fully vectorized)
  
  Given `x` - NxD matrix of inputs
@@ -165,7 +165,7 @@ def direct method(x, t):
  A = np.matmul(x.T, x)
  c = np.dot(x.T, t)
  return np.matmul(linalg.inv(A), c)
-`"
+```
 
 ## Gradient Descent
 
@@ -197,8 +197,9 @@ def getGradient(x, w, t):
  N, D = np.shape(x)
  gradient = (1.0/ float(N)) * np.matmul(np.transpose(x), loss(x,w,t))
  return gradient
+```
 
-
+```python
 def gradientDescentMethod(x, t, alpha=0.1, tolerance=1e-2):
  N, D = np.shape(x)
  #w = np.random.randn(D)
@@ -219,7 +220,7 @@ def gradientDescentMethod(x, t, alpha=0.1, tolerance=1e-2):
  iterations += 1
  w = w_k
  return w, w_cost
-`"
+```
 
 
 ## Generalization

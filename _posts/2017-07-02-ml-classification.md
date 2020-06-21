@@ -2,8 +2,8 @@
 title: "Introduction to Machine Learning - Classification."
 description:  The post present introduce machine learning classification problem with focus on logistic and multi-class logistic regression.
 
-toc: true
-comments: true
+toc: false
+comments: false
 layout: post
 categories: [Machine learning]
 image: images/post/classification.png
@@ -13,15 +13,15 @@ author: Anthony Faustine
 ## Introduction
 
 
-Previously we learned how to predict continuous-valued quantities as a linear function of input values.This post will describe a classification probem where the goal is to learn a mapping from inputs $x$$ to target $$t$$ such that $$t \in \{1\ldots C \}$$ with with $$C$$ being the number of classes.If $$C = 2$$, this is called binary classification (in which case we often assume $$y \in \{0, 1\}$$; if $$C > 2 $$, this is called multiclass classification.
+Previously we learned how to predict continuous-valued quantities as a linear function of input values. This post will describe a classification problem where the goal is to learn a mapping from inputs $x$ to target $t$ such that $t \in \{1\ldots C \}$ with $C$ being the number of classes.If $C = 2$, this is called binary classification (in which case we often assume $y \in \{0, 1\}$; if $C > 2$, this is called multiclass classification.
 
 We will first consider binary classification problem in which the target classes $t$ will be generated from 2 class distributions: blue ($t=1$) and red ($t=0$). Samples from both classes are sampled from their respective distributions. These samples are plotted in the figure below.
 
-Note that $X$ is a $N \times 2$ matrix of individual input samples $\mathbf{x}_i$, and that $\mathbf{t}$$ is a corresponding $$N \times 1$$ vector of target values $t_i$.
+Note that $X$ is a $N \times 2$ matrix of individual input samples $\mathbf{x}_i$, and that $\mathbf{t}$ is a corresponding $N \times 1$ vector of target values $t_i$.
 
 ## Logistic Regression
 
-With logistic regression the goal is to predict the target class $$t$$ from the input values $$x$$. The network is defined as having an input $\mathbf{x} = [x_1, x_2]$ which gets transformed by the weights $$\mathbf{w} = [w_1, w_2]$$ to generate the probability that sample $$\mathbf{x}$$ belongs to class $$t=1$$. This probability $$P(t=1\mid \mathbf{x},\mathbf{w})$$ is represented by the output $$y$$ of the network computed as $$y = \sigma(\mathbf{x} * \mathbf{w}^T)$$. $$\sigma$$ is the [logistic function](http://en.wikipedia.org/wiki/Logistic_function) and is defined as:
+With logistic regression the goal is to predict the target class $t$ from the input values $x$. The network is defined as having an input $\mathbf{x} = [x_1, x_2]$ which gets transformed by the weights $\mathbf{w} = [w_1, w_2]$ to generate the probability that sample $\mathbf{x}$ belongs to class $t=1$$ This probability $P(t=1\mid \mathbf{x},\mathbf{w})$ is represented by the output $y$ of the network computed as $y = \sigma(\mathbf{x} * \mathbf{w}^T)$. $\sigma$ is the [logistic function](http://en.wikipedia.org/wiki/Logistic_function) and is defined as:
 
 $$ 
 \sigma(z) = \frac{1}{1+e^{-z}} 
@@ -83,8 +83,8 @@ To derive the gradient descent updates, we'll need the partial derivatives of th
 $$
 \frac{\partial \mathcal{L}_{CE}}{\partial z}
 $$ 
-and then again to compute $$\frac{\partial \mathcal{L}_{CE}}{\partial w_j}$$ But first, let's find 
-$$\frac{\partial y}{\partial z}$$.
+and then again to compute $\frac{\partial \mathcal{L}_{CE}}{\partial w_j}$ But first, let's find 
+$\frac{\partial y}{\partial z}$.
 
 $$
 \frac{\partial y}{ \partial z} = \frac{e^{-z}}{(1 + e^{-z})^2}= y(1-y)
@@ -221,7 +221,7 @@ After running the above codes, we found that our model performs a training accur
 So far, we've talked about binary classification, but most classification problems involve more than two categories. Fortunately, this doesn't require any new ideas: everything pretty much works by analogy with the binary
 case. The first question is how to represent the targets. We could describe them as integers, but it's convenient to use indicator vectors or a one-of-K encoding.
 
-Since there are $$K$$ outputs and $$D$$ inputs, the linear function requires $$K \times D$$ matrix as well as $$K$$ dimensional bias vector. We use **softmax function** which is the multivariate generalization given as:
+Since there are $K$ outputs and $$D$$ inputs, the linear function requires $K \times D$ matrix as well as $K$ dimensional bias vector. We use **softmax function** which is the multivariate generalization given as:
 
 $$
 y_k = softmax(z_1 \ldots z_k) = \frac{e^{z_k}}{\sum_k e^{z_k}}
@@ -297,13 +297,13 @@ $$
 \end{aligned}
 $$
 
-Now consider derivative with respect to $$z_k$$ we can show (onboard) that
+Now consider derivative with respect to $z_k$ we can show (onboard) that.
 
 $$
 \frac{\partial y_l}{\partial z_k} = y_k (I_{k,l} - y_l)
 $$
 
-Where $$I_{k,l} = 1$$ if $$k=l$$ and $$0$$ otherwise.
+Where $I_{k,l} = 1$ if $k=l$ and $0$ otherwise.
 
 Therefore
 
