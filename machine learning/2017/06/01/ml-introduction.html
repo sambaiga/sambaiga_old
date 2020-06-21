@@ -315,20 +315,19 @@ J (w_1\ldots w_D,b) &amp; = \frac{1}{N} \sum_{i=1}^N \mathcal{L}(y^{(i)},t^{(i)}
 
 <p>In python, this result can be implemented as follows:</p>
 
-<p>```python
-def direct method(x, t):
- ‘”
- Solve linear regression exactly. (fully vectorized)</p>
-
-<p>Given <code class="highlighter-rouge">x</code> - NxD matrix of inputs
- <code class="highlighter-rouge">t</code> - target outputs
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">direct</span> <span class="n">method</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="s">'''
+ Solve linear regression exactly. (fully vectorized)
+ 
+ Given `x` - NxD matrix of inputs
+ `t` - target outputs
  Returns the optimal weights as a D-dimensional vector
- ‘’’
- N, D = np.shape(x)
- A = np.matmul(x.T, x)
- c = np.dot(x.T, t)
- return np.matmul(linalg.inv(A), c)
-`”</p>
+ '''</span>
+ <span class="n">N</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+ <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+ <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h2 id="gradient-descent">
 <a class="anchor" href="#gradient-descent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gradient Descent</h2>
@@ -349,33 +348,33 @@ def direct method(x, t):
 
 <p>The python implementation of gradient descent is shown below:</p>
 
-<p>```python
-def getGradient(x, w, t):
- N, D = np.shape(x)
- gradient = (1.0/ float(N)) * np.matmul(np.transpose(x), loss(x,w,t))
- return gradient</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">getGradient</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+ <span class="n">N</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="n">gradient</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">N</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">t</span><span class="p">))</span>
+ <span class="k">return</span> <span class="n">gradient</span>
+</code></pre></div></div>
 
-<p>def gradientDescentMethod(x, t, alpha=0.1, tolerance=1e-2):
- N, D = np.shape(x)
- #w = np.random.randn(D)
- w = np.zeros([D])
- # Perform Gradient Descent
- iterations = 1
- w_cost = [(w, cost(x,w, t))]
- while True:
- dw = getGradient(x, w, t)
- w_k = w - alpha * dw
- w_cost.append((w, cost(x, w, t)))
- # Stopping Condition
- if np.sum(abs(w_k - w)) &lt; tolerance:
- print (“Converged.”)
- break
- if iterations % 100 == 0:
- print (“Iteration: %d - cost: %.4f” %(iterations, cost(x, w, t)))
- iterations += 1
- w = w_k
- return w, w_cost
-`”</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">gradientDescentMethod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">):</span>
+ <span class="n">N</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+ <span class="c1">#w = np.random.randn(D)
+</span> <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">D</span><span class="p">])</span>
+ <span class="c1"># Perform Gradient Descent
+</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">1</span>
+ <span class="n">w_cost</span> <span class="o">=</span> <span class="p">[(</span><span class="n">w</span><span class="p">,</span> <span class="n">cost</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">,</span> <span class="n">t</span><span class="p">))]</span>
+ <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+ <span class="n">dw</span> <span class="o">=</span> <span class="n">getGradient</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+ <span class="n">w_k</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dw</span>
+ <span class="n">w_cost</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">w</span><span class="p">,</span> <span class="n">cost</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">t</span><span class="p">)))</span>
+ <span class="c1"># Stopping Condition
+</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">w_k</span> <span class="o">-</span> <span class="n">w</span><span class="p">))</span> <span class="o">&lt;</span> <span class="n">tolerance</span><span class="p">:</span>
+ <span class="k">print</span> <span class="p">(</span><span class="s">"Converged."</span><span class="p">)</span>
+ <span class="k">break</span>
+ <span class="k">if</span> <span class="n">iterations</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+ <span class="k">print</span> <span class="p">(</span><span class="s">"Iteration: </span><span class="si">%</span><span class="s">d - cost: </span><span class="si">%.4</span><span class="s">f"</span> <span class="o">%</span><span class="p">(</span><span class="n">iterations</span><span class="p">,</span> <span class="n">cost</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">t</span><span class="p">)))</span>
+ <span class="n">iterations</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="n">w</span> <span class="o">=</span> <span class="n">w_k</span>
+ <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="n">w_cost</span>
+</code></pre></div></div>
 
 <h2 id="generalization">
 <a class="anchor" href="#generalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generalization</h2>
