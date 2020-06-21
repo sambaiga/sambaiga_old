@@ -13,7 +13,7 @@ author: Anthony Faustine
 
 ## Introduction
 Training machine learning sometimes involves various hyperparameter settings. Performing a hyperparameter search is an integral element in building machine learning models. It consists of attuning different sets of parameters to find the best settings for excellent model performance. It should be remarked that deep neural networks can involve many hyperparameter settings. Getting the best set parameters for such a high dimensional space might a challenging task. Opportunely, different strategies and tools can be used to simplify the process. This post will guide you on how to use Optuna for a hyper-parameter search using [PyTorch](https://pytorch.org/) and [PyTorch lightning](https://github.com/PyTorchLightning/pytorch-lightning) framework.
-
+The notebook with all the code for this post can be find on [colab](https://colab.research.google.com/drive/1FLZlsa_3qEb9luECxQK6zdSPm3EO9g4y#scrollTo=jswgqLeCWKQL)
 
 ### Optuna
 [Optuna](https://optuna.org/) is an open-source hyperparameter optimization framework. It automates the process of searching for optimal hyperparameter using Python conditionals, loops, and syntax. The optuna library offers efficiently hyper-parameter search in large spaces while pruning unpromising trials for faster results. Using optuna it is possible to parallelize hyperparameter searches over multiple threads or processes without modifying code.
@@ -103,6 +103,7 @@ After the study is completed, we can export trials as a pandas data frame. This 
 df = study.trials_dataframe()
 ```
 
+The notebook with all the code for this post can be find on [colab](https://colab.research.google.com/drive/1FLZlsa_3qEb9luECxQK6zdSPm3EO9g4y#scrollTo=jswgqLeCWKQL)
 ## References
 
 - [Using Optuna to Optimize PyTorch Lightning Hyperparameters](https://medium.com/optuna/using-optuna-to-optimize-pytorch-lightning-hyperparameters-d9e04a481585)
