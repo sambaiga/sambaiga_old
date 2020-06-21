@@ -90,6 +90,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
   - jekyll-paginate
+  - jekyll-gist
 
 remote_theme: jekyll/minima
 
