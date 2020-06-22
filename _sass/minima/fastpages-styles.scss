@@ -21,6 +21,11 @@ $dt-green-light: rgb(172, 229, 145);
         margin-right: auto;
 }
 
+img.emoji{
+      display: inline !important;
+      vertical-align: baseline !important;
+}
+
 .post figcaption {
   text-align: center;
   font-size: .8rem;
@@ -490,4 +495,19 @@ table {
   border-top: 1px solid $dt-gray-light;
   margin-top: 50px;
   padding-top: 20px;
+}
+// Wrap text outputs instead of horizontal scroll
+.output_text.output_execute_result {
+  pre{
+    white-space: pre-wrap;
+  }
+}
+
+
+// Handling large charts on mobile devices
+@media only screen and (max-width: 900px) {
+  /* for mobile phone and tablet devices */
+  .output_wrapper{
+    overflow: scroll;
+  }
 }
