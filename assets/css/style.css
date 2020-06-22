@@ -857,6 +857,8 @@ form input[type=submit]:active { background: #7c677f; }
 
 .invisible { display: none; }
 
+.news table td { font-size: 1rem; }
+
 @media only screen and (max-width: 900px) { /* for mobile phone and tablet devices */
   .output_wrapper { overflow: scroll; } }
 
