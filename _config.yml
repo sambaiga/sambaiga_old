@@ -92,11 +92,11 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+ 
 
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
-paginate: 15
-paginate_path: /page:num/
+
 
 remote_theme: jekyll/minima
 
@@ -105,8 +105,11 @@ titles_from_headings:
   strip_title: true
   collections: true
 
-highlighter: rouge
+
+# Markdown and syntax highlight
 markdown: kramdown
+highlighter: rouge
+highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes  
 kramdown:
   math_engine: katex
   input: GFM
@@ -133,3 +136,37 @@ collections:
   resources:
     output: true
     permalink: /resources/:path/
+
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/  
+
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
+scholar:
+
+  last_name: Einstein
+
+  style: apa
+  locale: en
+
+  sort_by: year
+  order: descending
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
