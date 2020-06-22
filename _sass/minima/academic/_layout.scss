@@ -805,12 +805,6 @@
   font-size: 1rem;
 }
 
-.pagination .page-item.active .page-link {
-  background-color: $theme-color;
-  &:hover {
-    background-color: $theme-color;
-  }
-}
 
 // Handling large charts on mobile devices
 @media only screen and (max-width: 900px) {
