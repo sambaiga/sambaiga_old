@@ -1,6 +1,6 @@
 ---
 title: "Super-charge Deep learning hyper-parameter search with Optuna"
-description:  Learn how to perform hyper-parameter search using Optuna
+description:  Learn how to perform deep learning hyper-parameter search using Pytorch Lightning and Optuna
 toc: false
 comments: false
 layout: post
