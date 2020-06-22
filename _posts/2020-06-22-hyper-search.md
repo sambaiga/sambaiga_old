@@ -1,6 +1,6 @@
 ---
-title: "Super-charge Deep learning hyper-paramater search with Optuna"
-description:  Learn how to perform hyper-paramater search using Optuna
+title: "Super-charge Deep learning hyper-parameter search with Optuna"
+description:  Learn how to perform hyper-parameter search using Optuna
 toc: false
 comments: false
 layout: post
@@ -35,7 +35,7 @@ $$
 From equation above, $A(x) = 500x - 2x^2$ is an **objective function**, the function to be optimized. To maximize this function, we need to determine optimization constraints. We know that to construct a rectangular garden, we certainly need the lengths of both sides to be positive $y>0$, and $x>0$. Since $500 = 2x +y$ and $y>0$ then $x<250$. Therefore, we will try to determine the maximum value of A(x) for x over the open interval (0,50).
 
 Optuna [**trial**](https://optuna.readthedocs.io/en/stable/reference/trial.html) corresponds to a single execution of the **objective function** and is internally instantiated upon each invocation of the function. 
-To obtain the parameters for each trial within a provided *constraints* the [**suggest**] method (https://optuna.readthedocs.io/en/stable/reference/trial.html) is used. 
+To obtain the parameters for each trial within a provided *constraints* the [**suggest**](https://optuna.readthedocs.io/en/stable/reference/trial.html)  method is used. 
 ```python
 trial.suggest_uniform('x', 0, 250)
 ```
