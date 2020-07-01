@@ -386,6 +386,18 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 
 ::-webkit-scrollbar-corner { background-color: transparent; }
 
+.pubitem { margin: 2em 0; line-height: 1em; }
+
+.pubtitle { color: #7c677f; font-size: 32px; margin-bottom: 30px; text-align: center; }
+
+.pubauthors, .pubinfo { font-size: 75%; margin-bottom: .75em; }
+
+.pubteaser { clear: both; }
+
+.pubteaser a { float: left; margin-right: 2em; }
+
+.pubteaser img { width: 100px; border: 1px solid black; }
+
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
