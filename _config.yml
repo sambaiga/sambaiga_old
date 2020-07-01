@@ -136,12 +136,16 @@ collections:
   resources:
     output: true
     permalink: /resources/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/  
 
   news:
     defaults:
       layout: post
     output: true
-    permalink: /news/:path/  
+    permalink: /news/:path/ 
+  
 
 
 # -----------------------------------------------------------------------------
