@@ -23,6 +23,6 @@ Unlike the traditional approach, which requires deploying sensing infrastructure
 1. Anthony Faustine, Nerey Henry Mvungi, Shubi Kaijage, Kisangiri Michael (2017), A survey on Non-Intrusive Load Monitoring Methodies and Techniques for Energy Disaggregation problem, [arxiv:1703.00785](https://arxiv.org/abs/1703.00785).
 2. Christoph Klemenjak, Anthony Faustine, Stephen Makonin, Wilfried Elmenreich (2019), On Metrics to Assess the Transferability of Machine Learning Models in Non-Intrusive Load Monitoring, [arXiv:1912.06200](https://arxiv.org/abs/1912.06200).
 3. Faustine, A.; Pereira, L. Improved Appliance Classification in Non-Intrusive Load Monitoring Using Weighted Recurrence Graph and Convolutional Neural Networks. [***Energies***](https://www.mdpi.com/1996-1073/13/13/3374) 2020, 13, 3374.
-4. Anthony Faustine, Lucas Pereira (2020), [Improved Appliance Classification in  Non-Intrusive Load Monitoring using  Weighted Recurrence Graph and Convolutional Neural Networks](https://github.com/sambaiga/WRG-NILM).
+4. Anthony Faustine,Christoph Klemenjak, Lucas Pereira (2019), Adaptive Weighted Recurrence Graph for Appliance Recognition in Non-Intrusive Load Monitoring [under review](https://github.com/sambaiga/AWRGNILM).
 5. Anthony Faustine, Lucas Pereira (2020), Multi-label Learning for Appliances Recognition in NILM using Fryze-Current Decomposition and Convolutional Neural Network [under review](https://github.com/sambaiga/MLC_VI).
    
