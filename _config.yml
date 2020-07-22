@@ -42,6 +42,13 @@ minima:
     twitter: sambaiga
     github: sambaiga
 
+
+github_username: sambaiga
+twitter_username: sambaiga
+linkedin_username: sambaiga
+scholar_userid: Anthony Faustine
+orcid_id: # your ORCID ID
+
 # Set this to true to get LaTeX math equation support
 use_math: true
 
@@ -92,6 +99,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll/scholar
  
 
 # See https://jekyllrb.com/docs/pagination/
@@ -152,12 +160,17 @@ collections:
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
 scholar:
 
-  last_name: Einstein
+  last_name: Faustine
 
   style: apa
   locale: en
+  style: assets/bibliography/bibliography.csl
 
   sort_by: year
   order: descending
@@ -172,5 +185,6 @@ scholar:
   details_dir: bibliography
   details_layout: bibtex.html
   details_link: Details
+  repository: /publications
 
   query: "@*"

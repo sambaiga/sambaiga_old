@@ -24,6 +24,8 @@ group :jekyll_plugins do
   gem 'jekyll-gist'
   gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
+  gem 'jekyll-email-protect'
+  gem 'jekyll-scholar'
 end
 
 gem "kramdown-math-katex"

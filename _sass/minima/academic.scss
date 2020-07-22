@@ -1,5 +1,20 @@
 // Define defaults for each variable.
 //https://hookagency.com/website-color-schemes/
+  
+@charset "utf-8";
+@import 
+  url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+  
+  
+body {
+  font-family: "Open Sans", sans-serif;
+  height: auto;
+  min-height: 100%;
+  line-height: 1; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
 $type-scale-large: (
   h1: 2.941rem,
   h2: 2.111rem,
@@ -78,7 +93,7 @@ $breakpoint-small: 45em;
   }
 }
 
-$base-font-family: "PT Serif", serif !default;
+$base-font-family: "Open Sans", sans-serif;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -90,34 +105,7 @@ $alt-font-weight: bold !default;
 
 $spacing-unit:     50px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-//$brand-color:      #d93766 !default;
-$brand-color: #7c677f;
-//brand-color:      #d33682;
 
-$grey-color:       #3F3F3F !default;
-$grey-color-light: lighten($grey-color, 50%) !default;
-$grey-color-lighter: lighten($grey-color, 90%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
-$dark-gray:         #282a36;
-$light-gray:        #f8f8f2;
-$lighter-gray:      #eee;
-
-
-$dt-gray-dark: #282a36;  // Background
-$dt-gray: #44475a;       // Current Line & Selection
-$dt-gray-light: #f8f8f2; // Foreground
-$dt-blue: #6272a4;       // Comment
-$dt-cyan: #8be9fd;
-$dt-green: #50fa7b;
-$dt-orange: #ffb86c;
-$dt-pink: #ff79c6;
-$dt-purple: #bd93f9;
-$dt-red: #ff5555;
-$dt-yellow: #f1fa8c;
-$dt-green-light: rgb(172, 229, 145);
-//$brand-color:      #d33682;
 
 
 .post img {
@@ -206,7 +194,8 @@ $on-laptop:        800px !default;
 
 
 // make sure the post title doesn't have too much spacing
-.post-title { margin-top: .5rem !important; }
+.post-title { margin-top: .5rem !important; 
+            color: #0076df;}
 
 li {
   h3, h4 {
@@ -292,7 +281,7 @@ table {
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   -webkit-border-radius: 7px;
-  background-color: #9D9D9D;
+  background-color:$background-color;
   -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
 }
 ::-webkit-scrollbar-button {
@@ -336,10 +325,19 @@ text-align: center;
   width: 100px;
   border: 1px solid black;
 }
-// Import partials.
-@import
+
+@import    
+  
+  "academic/variables",
+  "academic/basscss",
   "academic/base",
+  "academic/clearfix",
+  "academic/links",
   "academic/layout",
+  "academic/pagination",
+  "academic/profile",
+  "academic/tables",
   "academic/publications",
   "academic/projects"
-;
+  ;
+
