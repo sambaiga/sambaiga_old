@@ -253,23 +253,6 @@ h6:hover .anchor-link {
   opacity: 1;
 }
 
-// Handle Overflow With Table Output
-
-table {
-  display: block !important;
-  overflow-x: auto;
-  white-space: nowrap;
-  font-size: 75%;
-  border:none;
-  th{
-    text-align: center! important;
-  }
-  td{
-    text-overflow:ellipsis;
-    overflow:hidden;
-    max-width: 15em;
-  }
-}
 
 // customize scrollbars
 ::-webkit-scrollbar {
@@ -294,37 +277,6 @@ table {
 }
 
 
-.pubitem {
-  margin: 2em 0;
-  line-height: 1em;
-}
-
-.pubtitle {
-  color: $brand-color;
-font-size: 32px;
-margin-bottom: 30px;
-// padding: 20px 0;
-text-align: center;
-}
-
-.pubauthors, .pubinfo {
-  font-size: 75%;
-  margin-bottom: .75em;
-}
-
-.pubteaser {
-  clear: both;
-}
-
-.pubteaser a {
-  float: left;
-  margin-right: 2em;
-}
-
-.pubteaser img {
-  width: 100px;
-  border: 1px solid black;
-}
 
 @import    
   
