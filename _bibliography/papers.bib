@@ -12,14 +12,26 @@ References
   year={2020},
   volume={},
   number={},
-  pages={1-1},}
+  pages={1-1},
+  url = {https://ieeexplore.ieee.org/document/9144492},
+  slides    = {AWGR.pdf},
+  abstract={To this day, hyperparameter tuning remains a cumbersome task in Non-Intrusive Load Monitoring (NILM) research, as researchers and practitioners are forced to invest a considerable amount of time in this task. This paper proposes adaptive weighted recurrence graph blocks (AWRG) for appliance feature representation in event-based NILM. An AWRG block can be combined with traditional deep neural network architectures such as Convolutional Neural Networks for appliance recognition. Our approach transforms one cycle per activation current into an weighted recurrence graph and treats the associated hyper-parameters as learn-able parameters. We evaluate our technique on two energy datasets, the industrial dataset LILACD and the residential PLAID dataset. The outcome of our experiments shows that transforming current waveforms into weighted recurrence graphs provides a better feature representation and thus, improved classification results. It is concluded that our approach can guarantee uniqueness of appliance features, leading to enhanced generalisation abilities when compared to the widely researched V-I image features. Furthermore, we show that the initialisation parameters of the AWRG’s have a significant impact on the performance and training convergence.},
+  keywords={Feature extraction;Monitoring;Aggregates;Neural networks;Current measurement;Voltage measurement;Energy consumption;Non-Intrusive Load Monitoring;Load Disaggregation;Appliance Recognition;Weighted Recurrence Graphs;Recurrence Plots;V-I Trajectories;Convolutional Neural Networks;Deep Neural Networks.},
+  doi={10.1109/TSG.2020.3010621},
+  ISSN={1949-3061}
+  }
 
-
-
-
-
-
-
+@article{Faustine2020,
+  year = {2020},
+  publisher = {{MDPI} {AG}},
+  volume = {},
+  number = {},
+  pages = {},
+  author = {Anthony Faustine and Lucas Pereira},
+  title = {Multi-label Learning for Appliance Recognition in NILM using Fryze-Current Decomposition and Convolutional Neural Network},
+  journal = {Energies},
+  abstract = {The advance in energy-sensing and smart-meter technologies have motivated the use of a Non-Intrusive Load Monitoring (NILM), a data-driven technique that recognizes active end-use appliances by analyzing the data streams coming from these devices. NILM offers an electricity consumption pattern of individual loads at consumer premises, which is crucial in the design of energy efficiency and energy demand management strategies in buildings. {Appliance classification, also known as load identification is an essential sub-task for identifying the type and status of an unknown load from appliance features extracted from the aggregate power signal}. Most of the existing work for appliance recognition in NILM uses a single-label learning strategy which, assumes only one appliance is active at a time. This assumption ignores the fact that multiple devices can be active simultaneously and requires a perfect event detector to recognize the appliance. In~this~paper proposes the Convolutional Neural Network (CNN)-based multi-label learning approach, which~links multiple loads to an observed aggregate current signal. Our approach applies the Fryze power theory to decompose the current features into active and non-active components and use the Euclidean distance similarity function to transform the decomposed current into an image-like representation which, is used as input to the CNN. Experimental results suggest that the proposed approach is sufficient for recognizing multiple appliances from aggregated measurements.}
+}
 
 @article{Faustine2020,
   doi = {10.3390/en13133374},
@@ -37,12 +49,13 @@ References
 }
 
 @inproceedings{Faustine2019,
-author = {Anthony Faustine, D.Deschrijver and T. Dhaene},
+author = {Anthony Faustine, Dirk Deschrijver and Tom Dhaene},
 title = {Improved Appliance Classification in NILM using Recurrence Plots and Convolutional Neural Networks},
-booktitle = {EU NILM Workshop, Thessaloniki, Greece, october 2019},
+booktitle = {EU NILM Workshop, Thessaloniki, Greece},
 publisher = {},
 address = {},
 pages = {},
+slides    = {PosterEURONILM2019.pdf},
 year = {2019}
 }
 

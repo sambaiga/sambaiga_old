@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="home">
-
+<h1>{{ page.title }}</h1>
   {% if site.paginate %}
     {% assign rawposts = paginator.posts %}
   {% else %}
@@ -16,7 +16,6 @@ layout: default
       {% assign posts = posts|push:post%}
     {% endif %}
   {% endfor %}
-
   
   {% assign grouped_posts = posts | group_by: "sticky_rank" | sort: "name", "last" %}
   {% assign sticky_posts = ''|split:'' %}
