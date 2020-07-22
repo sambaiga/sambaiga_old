@@ -25,7 +25,8 @@
 <script type="application/ld+json">
 {"@type":"WebPage","url":"https://sambaiga.github.io/sambaiga/resources.html","headline":"Resources","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/resources.html"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Resources | sambaiga</title>
@@ -139,7 +140,7 @@ window.onload = wrap_img;
       <span class="date">
       
 
-  2020-07-22 08:06:29 -0500
+  2020-07-22 10:51:29 -0500
 
 
       
@@ -173,7 +174,7 @@ window.onload = wrap_img;
       <span class="date">
       
 
-  2020-07-22 08:06:29 -0500
+  2020-07-22 10:51:29 -0500
 
 
       
@@ -207,7 +208,7 @@ window.onload = wrap_img;
       <span class="date">
       
 
-  2020-07-22 08:06:29 -0500
+  2020-07-22 10:51:29 -0500
 
 
       
@@ -229,37 +230,30 @@ window.onload = wrap_img;
 
 </ul>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

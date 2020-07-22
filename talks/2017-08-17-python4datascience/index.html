@@ -29,7 +29,8 @@
 <script type="application/ld+json">
 {"description":"Python is a powerful, flexible, open source and widely-used programming language with many applications. I had an opportunity to facilitate a workshop on python4Data science at Arusha Technical College (ATC), Arusha -Tanzania. The workshop aimed to explores Python’s place in the scientific ecosystem, and how the language, with several readily-available open-source libraries, can serve as a powerful tool for data science.","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/talks/2017-08-17-python4datascience/","headline":"Python 4 Data Science","dateModified":"2017-08-17T08:00:00-05:00","datePublished":"2017-08-17T08:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/talks/2017-08-17-python4datascience/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/talks/2017-08-17-python4datascience/"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Python 4 Data Science | sambaiga</title>
@@ -180,39 +181,30 @@ I had an opportunity to facilitate a workshop on python4Data science at Arusha T
   </div><a class="u-url" href="/sambaiga/talks/2017-08-17-python4datascience/" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
-<script src="/assets/js/katex_init.js"></script>
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

@@ -30,7 +30,8 @@
 <script type="application/ld+json">
 {"image":"https://sambaiga.github.io/sambaiga/images/post/python.jpg","description":"This post introduce python programming for data scince and machine learning","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/python/2019/04/01/python-basics.html","headline":"Basics of Python for Data Science and Machine learning","dateModified":"2019-04-01T00:00:00-05:00","datePublished":"2019-04-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/python/2019/04/01/python-basics.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/python/2019/04/01/python-basics.html"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Basics of Python for Data Science and Machine learning | sambaiga</title>
@@ -2865,37 +2866,30 @@ original value as many times as there are missing neighbors. Use your function t
 </script><a class="u-url" href="/sambaiga/python/2019/04/01/python-basics.html" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

@@ -29,7 +29,8 @@
 <script type="application/ld+json">
 {"description":"The talk is part of pythontz events and aims to give an accessible introduction to how to use machine learning techniques using scikit-learn for your own projects and datasets.Scikit-learn is a Python open source library designed to tackle machine learning problems from beginning to end. It provides efficient versions of a large number of common machine learning algorithms.","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/talks/2017-08-25-python4ML/","headline":"Practical Approaches on using Scikit-learn for Machine Learning Project.","dateModified":"2017-08-25T13:00:00-05:00","datePublished":"2017-08-25T13:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/talks/2017-08-25-python4ML/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/talks/2017-08-25-python4ML/"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Practical Approaches on using Scikit-learn for Machine Learning Project. | sambaiga</title>
@@ -171,39 +172,30 @@ window.onload = wrap_img;
   </div><a class="u-url" href="/sambaiga/talks/2017-08-25-python4ML/" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
-<script src="/assets/js/katex_init.js"></script>
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

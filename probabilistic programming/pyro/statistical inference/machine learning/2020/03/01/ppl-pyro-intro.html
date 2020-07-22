@@ -30,7 +30,8 @@
 <script type="application/ld+json">
 {"image":"https://sambaiga.github.io/sambaiga/images/ppl-pyro-intro.png","description":"A tutorial of how to use Pyro for probabilistic models.","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/probabilistic%20programming/pyro/statistical%20inference/machine%20learning/2020/03/01/ppl-pyro-intro.html","headline":"Probabilistic Programming with Pyro","dateModified":"2020-03-01T00:00:00-06:00","datePublished":"2020-03-01T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/probabilistic%20programming/pyro/statistical%20inference/machine%20learning/2020/03/01/ppl-pyro-intro.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/probabilistic%20programming/pyro/statistical%20inference/machine%20learning/2020/03/01/ppl-pyro-intro.html"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Probabilistic Programming with Pyro | sambaiga</title>
@@ -937,37 +938,30 @@ guess = {'slope': tensor(0.147, grad_fn=&lt;ExpandBackward&gt;), 'intercept': te
 </script><a class="u-url" href="/sambaiga/probabilistic%20programming/pyro/statistical%20inference/machine%20learning/2020/03/01/ppl-pyro-intro.html" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

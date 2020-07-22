@@ -31,7 +31,8 @@
 <script type="application/ld+json">
 {"image":"https://sambaiga.github.io/sambaiga/images/post/search.jpg","author":{"@type":"Person","name":"Anthony Faustine"},"description":"Learn how to perform deep learning hyper-parameter search using Pytorch Lightning and Optuna","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/deep%20learning/machine%20learning/2020/06/22/hyper-search.html","headline":"Super-charge Deep learning hyper-parameter search with Optuna","dateModified":"2020-06-22T00:00:00-05:00","datePublished":"2020-06-22T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/deep%20learning/machine%20learning/2020/06/22/hyper-search.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/deep%20learning/machine%20learning/2020/06/22/hyper-search.html"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Super-charge Deep learning hyper-parameter search with Optuna | sambaiga</title>
@@ -1586,37 +1587,30 @@ if (outputEl) {{
 </script><a class="u-url" href="/sambaiga/deep%20learning/machine%20learning/2020/06/22/hyper-search.html" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

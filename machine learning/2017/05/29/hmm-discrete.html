@@ -31,7 +31,8 @@
 <script type="application/ld+json">
 {"image":"https://sambaiga.github.io/sambaiga/images/post/dhmm.jpg","author":{"@type":"Person","name":"Anthony Faustine"},"description":"This post review E-M method for training standard HMM models with discrete observation.","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/machine%20learning/2017/05/29/hmm-discrete.html","headline":"Learning HMM parameters with Discrete Observation Models","dateModified":"2017-05-29T00:00:00-05:00","datePublished":"2017-05-29T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/machine%20learning/2017/05/29/hmm-discrete.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/machine%20learning/2017/05/29/hmm-discrete.html"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Learning HMM parameters with Discrete Observation Models | sambaiga</title>
@@ -365,39 +366,30 @@ Q(\hat{B}\mid B) &amp;= \sum _{t=1}^T \sum_s P(s_t = i\mid Y, \lambda) \log \hat
   </div><a class="u-url" href="/sambaiga/machine%20learning/2017/05/29/hmm-discrete.html" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
-<script src="/assets/js/katex_init.js"></script>
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

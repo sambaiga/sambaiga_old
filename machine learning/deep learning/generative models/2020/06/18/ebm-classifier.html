@@ -30,7 +30,8 @@
 <script type="application/ld+json">
 {"image":"https://sambaiga.github.io/sambaiga/images/post/EBM.jpg","description":"This post review energy-based model classfier presented in Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/machine%20learning/deep%20learning/generative%20models/2020/06/18/ebm-classifier.html","headline":"Energy Based Model Classifier","dateModified":"2020-06-18T00:00:00-05:00","datePublished":"2020-06-18T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/machine%20learning/deep%20learning/generative%20models/2020/06/18/ebm-classifier.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/machine%20learning/deep%20learning/generative%20models/2020/06/18/ebm-classifier.html"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Energy Based Model Classifier | sambaiga</title>
@@ -339,37 +340,30 @@ p_{\theta}(y| \mathbf{x})= \frac{p_{\theta}(\mathbf{x}, y)}{p_{\theta}(\mathbf{x
 </script><a class="u-url" href="/sambaiga/machine%20learning/deep%20learning/generative%20models/2020/06/18/ebm-classifier.html" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

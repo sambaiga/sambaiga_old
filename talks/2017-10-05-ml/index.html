@@ -28,7 +28,8 @@
 <script type="application/ld+json">
 {"description":"As part of pythontz events, I had an opportunity to present a talk on foundations of machine learning and deep learning at the University of Dodoma (CIVE). The talk introduces the basic of machine learning with a focus on supervised learning (classification and regression). It further presents the basic of deep learning, research direction, and opportunities for machine learning and deep learning in developing countries. It lastly presents different open source python libraries and frameworks for machine learning and deep learning. The presentation for this talk can be found here.","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/talks/2017-10-05-ml/","headline":"Foundation of Machine Learning and Deep learning.","dateModified":"2017-10-05T08:00:00-05:00","datePublished":"2017-10-05T08:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/talks/2017-10-05-ml/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/talks/2017-10-05-ml/"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Foundation of Machine Learning and Deep learning. | sambaiga</title>
@@ -159,39 +160,30 @@ window.onload = wrap_img;
   </div><a class="u-url" href="/sambaiga/talks/2017-10-05-ml/" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
-<script src="/assets/js/katex_init.js"></script>
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>

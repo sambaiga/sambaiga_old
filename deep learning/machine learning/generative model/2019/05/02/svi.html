@@ -30,7 +30,8 @@
 <script type="application/ld+json">
 {"image":"https://sambaiga.github.io/sambaiga/images/post/variation.jpg","description":"This post introduce stochastic gradient based algorithm (SVI) used in practise to do variational inference under mean filed assumptions. It also present two important tricks namely re-parametrization trick and amortized inference that are useful when using SVI in solving problems.","@type":"BlogPosting","url":"https://sambaiga.github.io/sambaiga/deep%20learning/machine%20learning/generative%20model/2019/05/02/svi.html","headline":"Stochastic Variational Inference (SVI)","dateModified":"2019-05-02T00:00:00-05:00","datePublished":"2019-05-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sambaiga.github.io/sambaiga/deep%20learning/machine%20learning/generative%20model/2019/05/02/svi.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
+  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
   <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
   <link rel="canonical" href="https://sambaiga.github.io/sambaiga/deep%20learning/machine%20learning/generative%20model/2019/05/02/svi.html"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Stochastic Variational Inference (SVI) | sambaiga</title>
@@ -423,37 +424,30 @@ $$<p>where $f_{\phi}(.)$ is the deep neural net function of $z$</p>
 </script><a class="u-url" href="/sambaiga/deep%20learning/machine%20learning/generative%20model/2019/05/02/svi.html" hidden></a>
 </article>
       </div>
-    </main><footer class="site-footer">
+    </main><footer>
 
   <div class="wrapper">
-<div class="wrapper">
-     Copyright 2020 
+    &copy; Copyright 2020 .
     
     
-    : sambaiga@gmail.com
+    :sambaiga@gmail.com
   </div>
 
-  </div>
 </footer>
-
-
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>
-
 <script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
-
-
-</body>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script></body>
 
 </html>
