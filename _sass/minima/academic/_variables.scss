@@ -64,7 +64,7 @@ $lighter-gray:      #eee !default;
 $grey-color:        #828282;
 $grey-color-light:  lighten($grey-color, 40%);
 $grey-color-dark:   darken($grey-color, 25%);
-$grey-color-lighter: lighten($grey-color, 90%);
+$grey-color-lighter: $blue-2;
 
 $darken-1:          rgba(#000,.0625) !default;
 $darken-2:          rgba(#000,.125) !default;
@@ -139,7 +139,6 @@ $hljs-deletion: $light-pink;
 $hljs-addition: $light-green;
 $hljs-change: $dark-blue;
 $hljs-chunk: $light-gray;
-
 // Header
 $nav-height: 56px;
 
@@ -160,3 +159,6 @@ $img_spacing: 5px;
 $img-height: 275px;
 $caption-font-size: 12px;
 $caption-color: #aaa;
+
+/* add on-palm to be consistent with other jekyll theme media queries */
+$on-palm:  600px !default;
