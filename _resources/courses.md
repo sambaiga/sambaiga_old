@@ -66,3 +66,6 @@ description: "List of Machine learning and AI courses which can help you learn a
 - [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures)
    - 26-27 August 2017 - Berkeley CA
 
+### AI for Earth Observation and Remote sensing
+  - [ML, Information theory, Signal and Image processing for EO](https://isp.uv.es/courses.html).
+  
