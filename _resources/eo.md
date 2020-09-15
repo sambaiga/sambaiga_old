@@ -20,3 +20,4 @@ Python bindings and utilities for GeoJSON a format for encoding a variety of geo
 EarthPy builds upon the functionality developed for raster data (rasterio) and vector data (geopandas) in Python and simplifies the code needed to
 - [Pyosmium](https://github.com/osmcode/pyosmium) a library to process OSM files in different formats. It is a wrapper of the C++ library osmium and allows fast and efficent sequential processing of OpenStreetMap data.
 - [Eo-learn](https://github.com/sentinel-hub/eo-learn)  is a collection of open source Python packages that have been developed to seamlessly access and process spatio-temporal image sequences acquired by any satellite fleet in a timely and automatic manner
+- [Solaris](https://solaris.readthedocs.io/en/latest/index.html)  An open source ML pipeline for overhead imagery by CosmiQ Works.
