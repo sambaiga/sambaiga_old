@@ -9,3 +9,5 @@ venue: ""
 ---
 
 This talk presents a convolutional neural network appliance for appliance recoginition which is an important sub-task of the NILM problem. The talk further presents the work on progress on the development of hybrid DNN-HMM algorithms for energy disaggregation. Slides for this talk can be found [here](http://www.datascienceafrica.org/dsa2017/#top).
+{% include youtube.html content="https://youtu.be/8TCCpEJI2cg" %}
+
