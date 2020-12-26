@@ -1,31 +1,55 @@
 ---
-layout: default
+layout: gridlay
 ---
-<div class="home">
+<style>
+  .btn{
+      margin-bottom:0;
+  }
+  .jumbotron{
+      padding-bottom:0px;
+      padding-top:5px;
+      margin-top:10px;
+      margin-bottom:10px
+  }
+  </style>
 
-    <h1>{{ page.title }}</h1>
 {% assign publications = site.publications | sort: "year" | reverse %}
 {% for pub in publications %}
-<div class="pubitem">
-  <div class="pubtitle">
-    {{ pub.title }}
-  </div>
-  <div class="pubauthors">
-    {{ pub.authors }}
-  </div>
-  <div class="pubinfo">
-    {{ pub.publication }}, {{ pub.year}}
-  </div>
-</div>
-<div class="pubteaser">
-  <a href="{{pub.url}}">
-    <img src="/images/{{ pub.slug }}_small.png" alt="{{pub.slug}} publication teaser"/>
-  </a>
-</div>
-<div class="publinks">
-  <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-  <a href="{{pub.url}}"><i class="fas fa-link"></i> Project Page</a>
-</div>
+  {% if pub.year %}{% else %}
+   {% assign yeartest = false %}
+  {% endif %}
 {% endfor %}
- 
-</div>
+
+{% if yeartest == false %}
+  ### Under Review
+{% endif %}
+
+<div class="jumbotron">
+  <div class="row">
+  <div class="d-none d-md-block col-sm-2">
+  {% if pub.image %}
+   <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" width="100%" style="margin-top:5px"/>
+  {% endif %}
+  </div>
+  <div class="col-md-10 col-sm-12 col-xs-12">
+    <strong> {{ pub.title }}</strong><br/>
+    {{ pub.authors | replace_first: 'A. Faustine', '<b>A. Faustine</b>'}}<br/>
+    {% if pub.journal %}Under review at <i>{{ pub.journal }}</i>,{% endif %} {% if publ.arxiv %} arXiv {{ publi.arxiv }}{% endif %}<br/>
+    {% if pub.url %}<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ pub.url }}.pdf" target="_blank"><i class="far fa-file-pdf"></i>pdf</a>{% endif %}
+    {% if pub.arxiv %}<a href="https://arxiv.org/abs/{{ publi.arxiv }}" target="_blank"><i class="fas fa-link"></i>arxiv</a> {% endif %}
+    
+    {% if pub.abstract %} <a data-toggle="collapse" href="#{{pub.url}}"   aria-expanded="false" aria-controls="{{publi.url}}"><i class="fa fa-info-circle" aria-hidden="true"></i>abstract</a>{% endif %}
+   
+   {% if pub.abstract %}
+   <div class="collapse" id="{{pub.url}}"><div class="well-collapse">
+    {{pub.abstract}}
+   </div></div>
+   {% endif %}
+   
+   
+   </div>
+   </div>
+   </div>
+   {% endif %}
+   {% endfor %}
+

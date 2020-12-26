@@ -41,6 +41,7 @@ minima:
   social_links:
     twitter: sambaiga
     github: sambaiga
+    googlescholar: nhzHBTQAAAAJ
 
 
 github_username: sambaiga
@@ -68,10 +69,22 @@ exclude:
   - docker-compose.yml
   - action.yml
   - Makefile
+   - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - update_boostrap.sh
+  - switch_theme.sh
+  - makebib.py
 
+
+  
+# Do you want to group your publications by year? {true/false}
+group_pub_by_year: true
 # this setting allows you to keep pages organized in the _pages folder
 include:
   - _pages
+  - .htaccess
+
 
 
  # This specifies what badges are turned on by default for notebook posts.
@@ -100,6 +113,7 @@ plugins:
   - jekyll-sitemap
   - jemoji
   - jekyll/scholar
+  - jekyll-youtube
  
 
 # See https://jekyllrb.com/docs/pagination/
@@ -118,12 +132,22 @@ titles_from_headings:
 markdown: kramdown
 highlighter: rouge
 highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes  
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 kramdown:
   math_engine: katex
   input: GFM
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+  input: GFM
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
 
 #pagination
 #gems:
@@ -160,30 +184,5 @@ collections:
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
-# -----------------------------------------------------------------------------
-# Jekyll Scholar
-# -----------------------------------------------------------------------------
 
-scholar:
-  last_name: Faustine
 
-  style: apa
-  locale: en
-  style: assets/bibliography/bibliography.csl
-
-  sort_by: year
-  order: descending
-
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-
-  replace_strings: true
-  join_strings: true
-
-  details_dir: bibliography
-  details_layout: bibtex.html
-  details_link: Details
-  repository: /publications
-
-  query: "@*"

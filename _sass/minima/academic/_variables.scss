@@ -58,10 +58,10 @@ $yellow:            #efcc00 !default;
 $white:             #fff !default;
 $dark-gray:         #333 !default;
 $mid-gray:          #666 !default;
-$light-gray:        #ccc !default;
-$lighter-gray:      #eee !default;
+$light-gray:        rgb(65, 61, 61) !default;
+$lighter-gray:      rgb(123, 112, 112) !default;
 
-$grey-color:        #828282;
+$grey-color:        $blue-2;
 $grey-color-light:  lighten($grey-color, 40%);
 $grey-color-dark:   darken($grey-color, 25%);
 $grey-color-lighter: $blue-2;
@@ -73,12 +73,13 @@ $darken-4:          rgba(#000,.5) !default;
 
 $theme-color:       $green;
 $code-color:        $dark-gray;
-$text-color:        $mid-gray;
+//$text-color:        $mid-gray;
+$text-color:        $darken-1;
 $background-color:  white;
 
 // Links
 $link-color:        $theme-color;
-$link-hover-color:  darken($theme-color, 40%);
+$link-hover-color:  $theme-color; //darken($theme-color, 80%);
 
 // Breakpoints
 $breakpoint-md: '(min-width: 52em)';
@@ -161,4 +162,8 @@ $caption-font-size: 12px;
 $caption-color: #aaa;
 
 /* add on-palm to be consistent with other jekyll theme media queries */
-$on-palm:  600px !default;
+$content-width:    1000px;
+$on-palm:          800px;
+$on-laptop:        1000px;
+$on-medium:        1000px;
+$on-large:         1200px;

@@ -26,6 +26,11 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-email-protect'
   gem 'jekyll-scholar'
+  gem "thin"
+  gem "rack", ">= 2.2.3"
+  gem "sassc", ">2.0.1"
+  gem "kramdown-parser-gfm"
+  gem "jekyll-youtube"
 end
 
 gem "kramdown-math-katex"

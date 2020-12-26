@@ -2,13 +2,12 @@
 layout: default
 ---
 <div class="home">
-<h1>{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
   {% if site.paginate %}
     {% assign rawposts = paginator.posts %}
   {% else %}
     {% assign rawposts = site.posts %}
   {% endif %}
-
   
   {% assign posts = ''|split:'' %}
   {% for post in rawposts %}
@@ -33,7 +32,7 @@ layout: default
   {% assign posts = sticky_posts | concat: non_sticky_posts %}
 
   {%- if posts.size > 0 -%}
-    {
+    
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}

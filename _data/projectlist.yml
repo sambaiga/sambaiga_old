@@ -1,0 +1,91 @@
+
+- title: "Machine Learning for Green Energy, Creating Value from Smart-meter Data."
+  org: CeADAR
+  image: smart-meter.png
+  year: 2021
+  url: mlgreen
+  abstract: "The rollout of smart meters is expected to produce significant energy consumption data at an unprecedented rate. Applying Machine Learning (ML) techniques to this massive data will enable the development of intelligent systems that convert energy metering data into easily understandable insights. This is likely to create value-added services to both consumers and utility companies and contribute to higher energy efficiency levels.  This project's envisaged goal is to investigate, design, and validate data analytics and machine-learning techniques for smart-meter energy consumption data.
+
+"
+
+
+- title: "AI-ready EO training datasets (AIREO) Dataset specifications and Best-practices"
+  org: CeADAR
+  image: aireo.jpeg
+  year: 2021
+  url: arieo
+  link: https://eo4society.esa.int/projects/aireo/
+  abstract: "This project aim to establish community-driven dataset specifications, a collection of best-practices and a set of benchmark EO dataset for AI-ready training datasets (AIREO) for applications of AI in EO. It is a partnership between CeADAR, Irish Centre for High-End Computing (ICHEC) and the European Space Agency (ESA)."
+
+- title: "AI for Earth Observation"
+  org: CeADAR
+  image: eo-project.png
+  year: 2020
+  url: eoai
+  abstract: "Machine learning-based computer vision models have been emerging as the primary tool to analyze and extract essential insights from Earth Observation (EO) imagery data. However, applying such models to EO imagery requires access to large annotated training datasets. Several recent studies have confirmed that existing geo-referenced data sources such as OpenStreetMap (OSM) can effectively be used as a source of ground truth for EO imagery data. Yet, integrating these geo-referenced annotation sources with EO data requires expertise in satellite imagery. On the other hand, building a computer vision model requires relevant machine learning skills, making it difficult for researchers, scientists, and companies to develop or test their use-cases without this blend of skills.
+  This project aims to address this challenge by automating the process of creating and evaluating
+  deep learning models for EO applications. The project's envisioned goal is to make it easy for companies and
+  businesses without the extensive experience of developing AI models and EO for their specific
+  use-cases. Specifically, the project investigates the possibility of generating an annotated
+  dataset by leveraging satellite imagery and other geo-referenced data such as OSM. It further
+  describes the process of how to apply deep learning models for object detection on EO imagery
+  through experimentation."
+  youtube: fpnwYz8zZ9Q
+
+- title: "Robust Machine learning methods for Non-Intrusive Load Monitoring (NILM)"
+  org: CeADAR
+  image: poster.JPG
+  year: 2019
+  url: nilm
+  abstract: "Energy use is in residential buildings is rapidly increasing across most parts of the world. 
+This is the growing concern due to energy and sustainability challenges facing society. 
+Therefore, there is a need for reducing energy consumption in residential buildings.
+
+Recently, large-scale deployments of smart meters have sparked the interest towards developing effective non-intrusive load monitoring (NILM) solutions for reducing energy consumption in buildings. 
+NILM uses smart meter data to infer what end-appliances running in the building and estimate their respective power consumption.
+This project is expected to accomplish three main objectives:
+
+<ol>
+          <li>Investigate and develop robust feature representation for appliance recognition in NILM</li>
+          <li>Explore multilabel-learning for appliance recognition in NILM.</li>
+          <li> Develop end-to-end NILM and investigate its value propositions in smart-grid.</li>
+        </ol>
+"
+ 
+- title: "Applying Mobile Technology for Medical Drugs Verification in Tanzania"
+  org: CeADAR
+  image: dvs.png
+  year: 2016
+  url: dvs
+  abstract: "Through the financial support of [Tanzania Communications Regulatory Authority (TCRA)](https://www.tcra.go.tz/), we embarked on a three-year research on Applying Mobile Technology for Drugs Verification in Tanzania. The main objective of the research was to design, develop, implement and support a mobile technology-based system to secure the Tanzanian health sector by enabling medical drugs verification.
+
+As one of the main output of the project, Drugs Verification System (DVS) prototype, which is a mobile technology-based system to track, trace and authenticate medical drugs, was developed and tested. 
+
+DVS is a comprehensive system designed to secure pharmaceutical supply chain and enables: medical drugs consumers and other stakeholders of the pharmaceutical supply chain to perform medical drugs verification and access relevant information such as: health facility profiling and search, pharmacy maping and search, medical drug profile etc.
+It furher provides electronic tracking and tracing of medical drugs. This allows key stakeholders to more precisely track and trace drug products through the supply chain
+
+"
+
+- title: "Adverse Reaction e-Reporting System (ADR)"
+  org: UDOM
+  image: adr.png
+  year: 2017
+  url: adr
+  abstract: "Through a user centered and agile software development methods, this project has developed an Adverse Reaction Reporting System (ADR).  The ADR system provides features (mobile and web-based) for healthcare professionals and consumers to voluntarily report issues regarding quality of medical drugs, medication errors and adverse reactions.  Furthermore the system allows TFDA to receive and perform causality assessment on the reported cases. The ADR system has also implemented the data exchange standard provided by the WHO to automate the submission of the ADR reports from TFDA to WHO.
+The ADR Reporting System can be downloaded at Google Play Store as [TFDA ADR Reporting Tool](https://play.google.com/store/apps/details?id=com.cive.HakikiDawaADR&hl=en) and installed on android smart phone. The web-based application can be accessed at [here](http://www.tfda.go.tz/adr/).
+
+"
+
+- title: "Water Resources Governance System (WaGoSy)"
+  org: UDOM
+  image: vicres.png
+  year: 2015
+  url: vicres
+  abstract: "The project developed innovative and integrated solutions for Governance of Water Resources within Lake Victoria Basin named as Water Resources Governance System (WaGoSy).
+WaGoSy is an integrated and innovative ICT system designed to enhance participation,transparency, accountability and awareness among LVB water resources stakeholders, which
+are typical indicators of good governance. The system provides effective, efficient and timely means for communication, knowledge creation.
+and sharing, reporting and feedback mechanisms. I lead the team that developed Wireless Sensors and Mobile Sensing Platform for Governance of Water Resources within Lake Victoria Basin. It consists of Water Quality Reporter (WaGoSy-WQR) which capture and send water quality data to a central database via mobile phones, WSN which gives the WaGoSy ability to test water quality parameters at selected sensitive sites continuously.
+
+Field testing of the system was conducted in Nkokonjero, Uganda and Mwanza, verified the functionalities of the system and its practical application in actual environment.
+"
+        
