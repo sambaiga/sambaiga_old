@@ -17,6 +17,10 @@
 <script src="{{ "/assets/javascript/popper/dist/umd/popper.min.js" | relative_url }}"></script>
 <script src="{{ "/assets/javascript/bootstrap/bootstrap.bundle.min.js" | relative_url }}"></script>
 
+
+
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
 $(document).ready(function(){
     var str =$(this).attr('id');
@@ -28,4 +32,15 @@ $(document).ready(function(){
         $('#' + id).toggle();
     });
 });
+
+  
+$(document).ready(function() {
+    $('a.abstract').click(function() {
+        $(this).parent().parent().find(".abstract.hidden").toggleClass('open');
+    });
+    $('a.bibtex').click(function() {
+        $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
+    });
+});
 </script>
+
