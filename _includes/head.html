@@ -1,3 +1,19 @@
+
+   <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav">
+            {% for page in site.nav_pages %}
+             <li class="nav-item">
+              <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/{{page.name}}">{{page.name | capitalize }}</a>
+             </li> 
+            {% endfor %}
+          </ul>
+    </div>
+  </nav>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
