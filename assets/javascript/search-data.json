@@ -245,13 +245,7 @@
   
 
   
-  
-
-  
-  
-
-  
-      ,"page11": {
+      ,"page9": {
           "title": "Talks",
           "content": "Talks . {% if site.data.conference_talks %} . Conference Presentation . {% for publi in site.data.conference_talks %} {{ publi.title }} {{ publi.authors | replace_first: &#39;A. Faustine&#39;, &#39;A. Faustine&#39;}} {{ publi.conf }} ({{ publi.year }}) {% if publi.url %} slides{% endif %} {% if publi.link %} link {% endif %} {% if publi.youtube %} video {% endif %} {% if publi.youtube %} {% endif %} | {% endfor %} . {% endif %} . {% if site.data.invited_talks %} . Invited Talks and Workshop . {% for publi in site.data.invited_talks %} {{ publi.title }} {{ publi.authors | replace_first: &#39;A. Faustine&#39;, &#39;A. Faustine&#39;}} {{ publi.conf }} ({{ publi.year }}) {% if publi.url %} slides{% endif %} {% if publi.link %} link {% endif %} {% if publi.youtube %} video {% endif %} {% if publi.youtube %} {% endif %} | {% endfor %} . {% endif %} .",
           "url": "https://sambaiga.github.io/sambaiga/talks/",
@@ -268,7 +262,7 @@
   
 
   
-      ,"page14": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://sambaiga.github.io/sambaiga/robots.txt",
