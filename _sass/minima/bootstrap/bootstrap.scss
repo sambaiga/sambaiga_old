@@ -23,8 +23,8 @@
 @import "button-group";
 @import "input-group";
 @import "custom-forms";
-@import "nav";
-@import "navbar";
+//@import "nav";
+//@import "navbar";
 @import "card";
 @import "breadcrumb";
 //@import "pagination";
@@ -56,10 +56,7 @@ img {
     margin-bottom:22px;
 }
 
-.navbar {
-  margin-bottom: 20px;
-  border-bottom: 4px solid var(--secondary);
-}
+
 
 .btn {
     margin-top: 5px;
