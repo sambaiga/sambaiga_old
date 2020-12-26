@@ -13,3 +13,20 @@
   url: UNET-NILM2020
   youtube: UpZDX2hU3-A
   link: http://nilmworkshop.org/2020/
+
+- authors: A. Faustine, D .Deschrijver and T. Dhaene
+  title: Improved Appliance Classification in NILM using Recurrence Plots and Convolutional Neural Networks
+  conf: EU NILM Workshop, Thessaloniki, Greece
+  year: 2019
+  url: PosterEURONILM2019
+  youtube: xDEHwC2QmuU?start=353
+  link: http://www.nilm.eu/  
+
+
+- authors: A. Faustine
+  title: Convolutional Neural Network for Appliance Classification in NILM
+  conf: Data Science Africa, Arusha, Tanzania
+  year: 2017
+  url: ConvNILM
+  youtube: 8TCCpEJI2cg
+  link: http://www.datascienceafrica.org/dsa2017/  

@@ -41,12 +41,13 @@ permalink: /talks/
 
 {% if site.data.invited_talks %}
 
-### Conference Presentation
+### Invited Talks and Workshop
 <div class="jumbotron">
 <ul>
 {% for publi in site.data.invited_talks %}
 <li> 
 <strong>{{ publi.title }}</strong> <br/> 
+ {{ publi.authors | replace_first: 'A. Faustine', '<b>A. Faustine</b>'}} <br/>
  <i>{{ publi.conf }}</i> ({{ publi.year }})  
  {% if publi.url %}
  <a href="{{ site.url }}{{ site.baseurl }}/talk/{{ publi.url }}.pdf" target="_blank"><i class="far fa-file" aria-hidden="true"></i>slides</a>{% endif %} 
@@ -65,6 +66,4 @@ permalink: /talks/
  {% endfor %}
  </ul>
 </div>
-
-
 {% endif %}
