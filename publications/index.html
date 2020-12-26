@@ -25,10 +25,10 @@
 <script type="application/ld+json">
 {"headline":"Publications","@type":"WebPage","url":"https://sambaiga.github.io/sambaiga/publications/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/vendor/foundation.min.css">
-  <link rel="stylesheet" href="/sambaiga/assets/css/style.css">
-  <link rel="stylesheet" href="/sambaiga/assets/css/main.css">
-  <link rel="canonical" href="https://sambaiga.github.io/sambaiga/publications/"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<link rel="stylesheet" href="/sambaiga/assets/css/style.css">
+  <link rel="canonical" href="https://sambaiga.github.io/sambaiga/publications/">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Publications | sambaiga</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Publications" />
@@ -119,663 +119,230 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/sambaiga/about/">Portfolio</a><a class="page-link" href="/sambaiga/post/">Blogs</a><a class="page-link" href="/sambaiga/project/">Project</a><a class="page-link" href="/sambaiga/publications/">Publications</a><a class="page-link" href="/sambaiga/resources.html">Resources</a><a class="page-link" href="/sambaiga/search/">Search</a><a class="page-link" href="/sambaiga/categories/">Tags</a><a class="page-link" href="/sambaiga/talks/">Talk</a></div>
+        <div class="trigger"><a class="page-link" href="/sambaiga/about/">Portfolio</a><a class="page-link" href="/sambaiga/post/">Blogs</a><a class="page-link" href="/sambaiga/projects/">Projects</a><a class="page-link" href="/sambaiga/publications/">Publications</a><a class="page-link" href="/sambaiga/resources.html">Resources</a><a class="page-link" href="/sambaiga/categories/">Tags</a><a class="page-link" href="/sambaiga/talks/">Talks</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="post">
-<h1 class="post-title" itemprop="name headline">Publications</h1>
-<h5 class="post-description"></h5>
-<article class="post-content Publications clearfix">
-    
-<article class="notepad-index-post post row">
+        <div id="gridid" class="col-sm-12 col-xs-12">
+  <style>
+.whitespace: no-wrap;
+.display: inline-block;
+.btn{
+    margin-bottom:1em;
+}
+.jumbotron{
+    padding-bottom:0px;
+    padding-top:5px;
+    margin-top:10px;
+    margin-bottom:10px
+}
+</style>
 
-  <h3 datetime="1969-12-31T18:33:40-06:00" class="year">2020</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="Faustine2020">Anthony Faustine and Lucas Pereira. <b>Multi-Label Learning for Appliance Recognition in NILM Using Fryze-Current Decomposition and Convolutional Neural Network</b>. <i>Energies</i>, 13(16) :4154, 2020.</span>
-<div id="Faustine2020">
+<h2 id="publications">Publications</h2>
 
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/10.3390/en13164154">10.3390/en13164154</a>]
-    
-  
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
+<h3 id="2021">2021</h3>
 
-  
-  
-  
-  
-  
-  </span>
+<div class="jumbotron">
+  <div class="row">
+    <div class="d-none d-md-block col-sm-2">
 
-  <!-- Hidden abstract block -->
-  
+      <p><img src="https://sambaiga.github.io/sambaiga/images/pubpic/awrg.jpg" width="100%" style="margin-top:5px" /></p>
+
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+      <p><b>Adaptive Weighted Recurrence Graphs for Appliance Recognition in Non-Intrusive Load Monitoring</b><br />
+  <b>A. Faustine</b>, L. Pereira and C. Klemenjak<br />
+  <i>IEEE Transactions on Smart Grid</i> 1949-3061 (2021)<br />
+  <a href="https://sambaiga.github.io/sambaiga/papers/AWRG.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a> 
+  <a href="http://dx.doi.org/10.1109/TSG.2020.3010621" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>LINK</a>
+    <a data-toggle="collapse" href="#AWRG2" aria-expanded="false" aria-controls="AWRG2"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>
+    <a data-toggle="collapse" href="#AWRG" aria-expanded="false" aria-controls="AWRG"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a></p>
+
+      <div class="collapse" id="AWRG">
+        <div class="well-collapse">
+          <p>To this day, hyperparameter tuning remains a cumbersome task in Non-Intrusive Load Monitoring (NILM) research, as researchers and practitioners are forced to invest a considerable amount of time in this task. This paper proposes adaptive weighted recurrence graph blocks (AWRG) for appliance feature representation in event-based NILM. An AWRG block can be combined with traditional deep neural network architectures such as Convolutional Neural Networks for appliance recognition. Our approach transforms one cycle per activation current into an weighted recurrence graph and treats the associated hyper-parameters as learn-able parameters. We evaluate our technique on two energy datasets, the industrial dataset LILACD and the residential PLAID dataset. The outcome of our experiments shows that transforming current waveforms into weighted recurrence graphs provides a better feature representation and thus, improved classification results. It is concluded that our approach can guarantee uniqueness of appliance features, leading to enhanced generalisation abilities when compared to the widely researched V-I image features. Furthermore, we show that the initialisation parameters of the AWRG’s have a significant impact on the performance and training convergence.</p>
+        </div>
+      </div>
+
+      <div class="collapse" id="AWRG2">
+        <div class="well-collapse">
+          <iframe src="https://sambaiga.github.io/sambaiga/papers/AWRG.txt" scrolling="yes" width="100%" height="210px" frameborder="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<h3 id="2020">2020</h3>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="d-none d-md-block col-sm-2">
+
+      <p><img src="https://sambaiga.github.io/sambaiga/images/pubpic/climateai2020.jpg" width="100%" style="margin-top:5px" /></p>
+
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+      <p><b>Leveraging Machine learning for Sustainable and Self-sufficient Energy Communities</b><br />
+  <b>A. Faustine</b>, L. Pereira, D. Ngondya, L. Benabbou<br />
+  <i>NeurIPS 2020 Workshop Tackling Climate Change with Machine Learning</i> 1949-3061 (2020)<br />
+  <a href="https://sambaiga.github.io/sambaiga/papers/climateai2020.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a> 
+   <a data-toggle="collapse" href="#climateai20202" aria-expanded="false" aria-controls="climateai20202"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>
+    <a data-toggle="collapse" href="#climateai2020" aria-expanded="false" aria-controls="climateai2020"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a></p>
+
+      <div class="collapse" id="climateai2020">
+        <div class="well-collapse">
+          <p>Community Energies (CEs) are the next-generation energy management techniques that empowers citizens to interact with the energy market as self-consumers or prosumers actively. Successful implementation of CEs will promote sustainable energy production and consumption practices; thus, contributing to affordable and clean energy (SDG7) and climate action (SDG 13). Despite the potential of CEs, managing the overall power production and demand is challenging. This is because power is generated, distributed and controlled by several producers, each of which with different, and potentially conflicting, objectives. Thus, this project will investigate the role of machine learning approaches in smartening CEs, increasing energy awareness and enabling distributed energy resources planning and management. The project implementation will be centered around proof of concept development and capacity development in Africa.</p>
+        </div>
+      </div>
+
+      <div class="collapse" id="climateai20202">
+        <div class="well-collapse">
+          <iframe src="https://sambaiga.github.io/sambaiga/papers/climateai2020.txt" scrolling="yes" width="100%" height="210px" frameborder="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="d-none d-md-block col-sm-2">
+
+      <p><img src="https://sambaiga.github.io/sambaiga/images/pubpic/multitask2020.jpg" width="100%" style="margin-top:5px" /></p>
+
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+      <p><b>UNet-NILM: A Deep Neural Network for Multi-tasks Appliances State Detection and Power Estimation in NILM</b><br />
+  <b>A. Faustine</b>, L. Pereira H, Bousbiat and S. Kulkarni<br />
+  <i>5th International Workshop on Non-Intrusive Load Monitoring (NILM), co-located with ACM BuildSys 2020 and jointly organized with the EU NILM Workshop</i>  (2020)<br />
+  <a href="https://sambaiga.github.io/sambaiga/papers/inilm-multitask.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a> 
+  <a href="https://doi.org/10.1145/3427771.3427859" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>LINK</a>
+    <a data-toggle="collapse" href="#inilm-multitask2" aria-expanded="false" aria-controls="inilm-multitask2"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>
+    <a data-toggle="collapse" href="#inilm-multitask" aria-expanded="false" aria-controls="inilm-multitask"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a></p>
+
+      <div class="collapse" id="inilm-multitask">
+        <div class="well-collapse">
+          <p>Over the years, an enormous amount of research has been exploring Deep Neural Networks (DNN), particularly Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs) for estimating the energy consumption of appliances from a single point source such as smart meters - Non-Intrusive Load Monitoring (NILM). However, most of the existing DNNs models for NILM use a single-task learning approach in which a neural network is trained exclusively for each appliance. This strategy is computationally expensive and ignores the fact that multiple appliances can be active simultaneously and dependencies between them. In this work, we propose UNet-NILM for multi-task appliances’ state detection and power estimation, applying a multi-label learning strategy and multi-target quantile regression. The UNet-NILM is a one-dimensional CNN based on the U-Net architecture initially proposed for image segmentation. Empirical evaluation on the UK-DALE dataset suggests promising performance against traditional single-task learning.</p>
+        </div>
+      </div>
+
+      <div class="collapse" id="inilm-multitask2">
+        <div class="well-collapse">
+          <iframe src="https://sambaiga.github.io/sambaiga/papers/inilm-multitask.txt" scrolling="yes" width="100%" height="210px" frameborder="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="d-none d-md-block col-sm-2">
+
+      <p><img src="https://sambaiga.github.io/sambaiga/images/pubpic/mlabelmdpi.jpg" width="100%" style="margin-top:5px" /></p>
+
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+      <p><b>Multi-Label Learning for Appliance Recognition in NILM Using Fryze-Current Decomposition and Convolutional Neural Network</b><br />
+  <b>A. Faustine</b> and L. Pereira<br />
+  <i>Energies</i> 13(16)-4154 (2020)<br />
+  <a href="https://sambaiga.github.io/sambaiga/papers/mlabelvi.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a> 
+  <a href="https://doi.org/10.3390/en13164154" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>LINK</a>
+    <a data-toggle="collapse" href="#mlabelvi2" aria-expanded="false" aria-controls="mlabelvi2"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>
+    <a data-toggle="collapse" href="#mlabelvi" aria-expanded="false" aria-controls="mlabelvi"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a></p>
+
+      <div class="collapse" id="mlabelvi">
+        <div class="well-collapse">
+          <p>The advance in energy-sensing and smart-meter technologies have motivated the use of a Non-Intrusive Load Monitoring (NILM), a data-driven technique that recognizes active end-use appliances by analyzing the data streams coming from these devices. NILM offers an electricity consumption pattern of individual loads at consumer premises, which is crucial in the design of energy efficiency and energy demand management strategies in buildings. Appliance classification, also known as load identification is an essential sub-task for identifying the type and status of an unknown load from appliance features extracted from the aggregate power signal. Most of the existing work for appliance recognition in NILM uses a single-label learning strategy which, assumes only one appliance is active at a time. This assumption ignores the fact that multiple devices can be active simultaneously and requires a perfect event detector to recognize the appliance. In this paper proposes the Convolutional Neural Network (CNN)-based multi-label learning approach, which links multiple loads to an observed aggregate current signal. Our approach applies the Fryze power theory to decompose the current features into active and non-active components and use the Euclidean distance similarity function to transform the decomposed current into an image-like representation which, is used as input to the CNN. Experimental results suggest that the proposed approach is sufficient for recognizing multiple appliances from aggregated measurements.</p>
+        </div>
+      </div>
+
+      <div class="collapse" id="mlabelvi2">
+        <div class="well-collapse">
+          <iframe src="https://sambaiga.github.io/sambaiga/papers/mlabelvi.txt" scrolling="yes" width="100%" height="210px" frameborder="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="d-none d-md-block col-sm-2">
+
+      <p><img src="https://sambaiga.github.io/sambaiga/images/pubpic/wrg.jpg" width="100%" style="margin-top:5px" /></p>
+
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+      <p><b>Improved Appliance Classification in Non-Intrusive Load Monitoring Using Weighted Recurrence Graph and Convolutional Neural Networks</b><br />
+  <b>A. Faustine</b> and L. Pereira<br />
+  <i>Energies</i> 13-3374 (2020)<br />
+  <a href="https://sambaiga.github.io/sambaiga/papers/wrg.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a> 
+  <a href="https://doi.org/10.3390/en13133374" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>LINK</a>
+    <a data-toggle="collapse" href="#wrg2" aria-expanded="false" aria-controls="wrg2"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>
+    <a data-toggle="collapse" href="#wrg" aria-expanded="false" aria-controls="wrg"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a></p>
+
+      <div class="collapse" id="wrg">
+        <div class="well-collapse">
+          <p>Appliance recognition is one of the vital sub-tasks of NILM in which a machine learning classier is used to detect and recognize active appliances from power measurements. The performance of the appliance classifier highly depends on the signal features used to characterize the loads. Recently, different appliance features derived from the voltage–current (V–I) waveforms have been extensively used to describe appliances. However, the performance of V–I-based approaches is still unsatisfactory as it is still not distinctive enough to recognize devices that fall into the same category. Instead, we propose an appliance recognition method utilizing the recurrence graph (RG) technique and convolutional neural networks (CNNs). We introduce the weighted recurrent graph (WRG) generation that, given one-cycle current and voltage, produces an image-like representation with more values than the binary output created by RG. Experimental results on three different sub-metered datasets show that the proposed WRG-based image representation provides superior feature representation and, therefore, improves classification performance compared to V–I-based features.</p>
+        </div>
+      </div>
+
+      <div class="collapse" id="wrg2">
+        <div class="well-collapse">
+          <iframe src="https://sambaiga.github.io/sambaiga/papers/wrg.txt" scrolling="yes" width="100%" height="210px" frameborder="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<h3 id="2017">2017</h3>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="d-none d-md-block col-sm-2">
+
+      <p><img src="https://sambaiga.github.io/sambaiga/images/pubpic/nilm-survey2020.jpg" width="100%" style="margin-top:5px" /></p>
+
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+      <p><b>A Survey on Non-Intrusive Load Monitoring Methodies and Techniques for Energy Disaggregation Problem</b><br />
+  <b>A. Faustine</b>, N. Henry Mvungi, S. Kaijage, K. Michael<br />
+  <i>arXiv preprint arXiv:1703.00785</i>  (2017)<br />
+  <a href="https://sambaiga.github.io/sambaiga/papers/nilmsurvey2017.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a> 
+  <a href="https://arxiv.org/abs/1703.00785" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>LINK</a>
+    <a data-toggle="collapse" href="#nilmsurvey20172" aria-expanded="false" aria-controls="nilmsurvey20172"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>
+    <a data-toggle="collapse" href="#nilmsurvey2017" aria-expanded="false" aria-controls="nilmsurvey2017"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a></p>
+
+      <div class="collapse" id="nilmsurvey2017">
+        <div class="well-collapse">
+          <p>The rapid urbanization of developing countries coupled with explosion in construction of high rising buildings and the high power usage in them calls for conservation and efficient energy program. Such a program require monitoring of end-use appliances energy consumption in real-time. The worldwide recent adoption of smart-meter in smart-grid, has led to the rise of Non-Intrusive Load Monitoring (NILM); which enables estimation of appliance-specific power consumption from building’s aggregate power consumption reading. NILM provides households with cost-effective real-time monitoring of end-use appliances to help them understand their consumption pattern and become part and parcel of energy conservation strategy. This paper presents an up to date overview of NILM system and its associated methods and techniques for energy disaggregation problem. This is followed by the review of the state-of-the art NILM algorithms. Furthermore, we review several performance metrics used by NILM researcher to evaluate NILM algorithms and discuss existing benchmarking framework for direct comparison of the state of the art NILM algorithms. Finally, the paper discuss potential NILM use-cases, presents an overview of the public available dataset and highlight challenges and future research directions.</p>
+        </div>
+      </div>
+
+      <div class="collapse" id="nilmsurvey20172">
+        <div class="well-collapse">
+          <iframe src="https://sambaiga.github.io/sambaiga/papers/nilmsurvey2017.txt" scrolling="yes" width="100%" height="210px" frameborder="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 
-</li>
-<li><span id="9144492">A. Faustine, L. Pereira, and C. Klemenjak. <b>Adaptive Weighted Recurrence Graphs for Appliance Recognition in Non-Intrusive Load Monitoring</b>. <i>IEEE Transactions on Smart Grid</i>, :1–1, 2020.</span>
-<div id="9144492">
-
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/10.1109/TSG.2020.3010621">10.1109/TSG.2020.3010621</a>]
-    
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
-
-  
-  
-  
-  
-    [<a href="https://sambaiga.github.io/sambaiga/assets/pdf/TSG3010621.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>]
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>To this day, hyperparameter tuning remains a cumbersome task in Non-Intrusive Load Monitoring (NILM) research, as researchers and practitioners are forced to invest a considerable amount of time in this task. This paper proposes adaptive weighted recurrence graph blocks (AWRG) for appliance feature representation in event-based NILM. An AWRG block can be combined with traditional deep neural network architectures such as Convolutional Neural Networks for appliance recognition. Our approach transforms one cycle per activation current into an weighted recurrence graph and treats the associated hyper-parameters as learn-able parameters. We evaluate our technique on two energy datasets, the industrial dataset LILACD and the residential PLAID dataset. The outcome of our experiments shows that transforming current waveforms into weighted recurrence graphs provides a better feature representation and thus, improved classification results. It is concluded that our approach can guarantee uniqueness of appliance features, leading to enhanced generalisation abilities when compared to the widely researched V-I image features. Furthermore, we show that the initialisation parameters of the AWRG’s have a significant impact on the performance and training convergence.</p>
-  </span>
-  
 </div>
 
-
-</li>
-<li><span id="126788">Anthony Faustine and Lucas Pereira. <b>Improved Appliance Classification in Non-Intrusive Load Monitoring Using Weighted Recurrence Graph and Convolutional Neural Networks</b>. <i>Energies</i>, 13(13) :3374, 2020.</span>
-<div id="126788">
-
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/10.3390/en13133374">10.3390/en13133374</a>]
-    
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>Appliance recognition is one of the vital sub-tasks of NILM in which a machine learning classier is used to detect and recognize active appliances from power measurements. The performance of the appliance classifier highly depends on the signal features used to characterize the loads. Recently, different appliance features derived from the voltage–current (V–I) waveforms have been extensively used to describe appliances. However, the performance of V–I-based approaches is still unsatisfactory as it is still not distinctive enough to recognize devices that fall into the same category. Instead, we propose an appliance recognition method utilizing the recurrence graph (RG) technique and convolutional neural networks (CNNs). We introduce the weighted recurrent graph (WRG) generation that, given one-cycle current and voltage, produces an image-like representation with more values than the binary output created by RG. Experimental results on three different sub-metered datasets show that the proposed WRG-based image representation provides superior feature representation and, therefore, improves classification performance compared to V–I-based features</p>
-  </span>
-  
-</div>
-
-
-</li>
-<li><span id="Faustine2020d">Lucas Pereira Anthony Faustine. <b>UNet-NILM: A Deep Neural Network for Multi-tasks Appliances state detection and power estimation in NILM</b>. In: <i>5th International Workshop on Non-Intrusive Load Monitoring (NILM), (co-located with ACM BuildSys 2020 and jointly organized with the EU NILM Workshop)</i> 2020.</span>
-<div id="Faustine2020d">
-
-  <span class="links">
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-    [<a href="https://sambaiga.github.io/sambaiga/assets/pdf/" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>]
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-</div>
-
-
-</li>
-<li><span id="Faustine2020e"><b>DeepEOPy:  A flexible Pipeline for Building ComputerVision Model Applicable to Earth Observation Data</b>. Presented at the 2020.</span>
-<div id="Faustine2020e">
-
-  <span class="links">
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-    [<a href="https://sambaiga.github.io/sambaiga/assets/pdf/" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>]
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-</div>
-
-
-</li>
-<li><span id="Faustine2020f">Daniel Ngondya Anthony Faustine Lucas Pereira and Loubna Benabbou. <b>Leveraging Machine learning for Sustainable and Self-sufficient Energy Communities</b>. In: <i>NeurIPS 2020 Workshop
-Tackling Climate Change with Machine Learning</i> 2020.</span>
-<div id="Faustine2020f">
-
-  <span class="links">
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-    [<a href="https://sambaiga.github.io/sambaiga/assets/pdf/" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>]
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-<article class="notepad-index-post post row">
-
-  <h3 datetime="1969-12-31T18:33:39-06:00" class="year">2019</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="Klemenjak2019OnMT">Christoph Klemenjak, Anthony Faustine, Stephen Makonin, and Wilfried Elmenreich. <b>On Metrics to Assess the Transferability of Machine Learning Models in Non-Intrusive Load Monitoring</b>. <i>ArXiv</i>, abs/1912.06200 2019.</span>
-<div id="Klemenjak2019OnMT">
-
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/"></a>]
-    
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>To assess the performance of load disaggregation algorithms it is common practise to train a candidate algorithm on data from one or multiple households and subsequently apply cross-validation by evaluating the classification and energy estimation performance on unseen portions of the dataset derived from the same households. With an emerging discussion of transferability in Non-Intrusive Load Monitoring (NILM), there is a need for domain-specific metrics to assess the performance of NILM algorithms on new test scenarios being unseen buildings. In this paper, we discuss several metrics to assess the generalisation ability of NILM algorithms. These metrics target different aspects of performance evaluation in NILM and are meant to complement the traditional performance evaluation approach. We demonstrate how our metrics can be utilised to evaluate NILM algorithms by means of two case studies. We conduct our studies on several energy consumption datasets and take into consideration five state-of-the-art as well as four baseline NILM solutions. Finally, we formulate research challenges for future work</p>
-  </span>
-  
-</div>
-
-
-</li>
-<li><span id="Faustine2019">Dirk Deschrijver Anthony Faustine and Tom Dhaene. <b>Improved Appliance Classification in NILM using Recurrence Plots and Convolutional Neural Networks</b>. In: <i>EU NILM Workshop, Thessaloniki, Greece</i> 2019.</span>
-<div id="Faustine2019">
-
-  <span class="links">
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-    [<a href="https://sambaiga.github.io/sambaiga/assets/pdf/PosterEURONILM2019.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>]
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-<article class="notepad-index-post post row">
-
-  <h3 datetime="1969-12-31T18:33:37-06:00" class="year">2017</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="A2017">Anthony Faustine. <b>Convolutional Neural Network for Appliance Classification in NILM</b>. In: <i>Data Science Africa, Arusha, Tanzania</i> 2017.</span>
-<div id="A2017">
-
-  <span class="links">
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-</div>
-
-
-</li>
-<li><span id="DBLP:FaustineMKM17">Anthony Faustine, Nerey Henry Mvungi, Shubi Kaijage, and Kisangiri Michael. <b>A Survey on Non-Intrusive Load Monitoring Methodies and Techniques
-               for Energy Disaggregation Problem</b>. <i>CoRR</i>, abs/1703.00785 2017.</span>
-<div id="DBLP:FaustineMKM17">
-
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/1223334555">1223334555</a>]
-    
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-    [<a href="http://arxiv.org/abs/abs/1703.00785" target="_blank">arXiv</a>]
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>The rapid urbanization of developing countries coupled with explosion in construction of high rising buildings and the high power usage in them calls for conservation and efficient energy program. Such a program require monitoring of end-use appliances energy consumption in real-time. The worldwide recent adoption of smart-meter in smart-grid, has led to the rise of Non-Intrusive Load Monitoring (NILM); which enables estimation of appliance-specific power consumption from building’s aggregate power consumption reading. NILM provides households with cost-effective real-time monitoring of end-use appliances to help them understand their consumption pattern and become part and parcel of energy conservation strategy. This paper presents an up to date overview of NILM system and its associated methods and techniques for energy disaggregation problem. This is followed by the review of the state-of-the art NILM algorithms. Furthermore, we review several performance metrics used by NILM researcher to evaluate NILM algorithms and discuss existing benchmarking framework for direct comparison of the state of the art NILM algorithms. Finally, the paper discuss potential NILM use-cases, presents an overview of the public available dataset and highlight challenges and future research directions.</p>
-  </span>
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-<article class="notepad-index-post post row">
-
-  <h3 datetime="1969-12-31T18:33:36-06:00" class="year">2016</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="FaustineOpen2016">Maria Gabriel Faustine Anthony and Bertha Shao. <b>Open Source Cellular Technologies for Cost Effective Cellular Connectivity in Rural Areas</b>. <i>International Journal of Computer Applications</i>, 146(15) 2016.</span>
-<div id="FaustineOpen2016">
-
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/10.5120/ijca2016910894">10.5120/ijca2016910894</a>]
-    
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
-   [<a href=""><i class="fa fa-download" aria-hidden="true"></i></a>]
-    
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>Cellular coverage is often a challenge in low population density and low income rural areas of the developing world like Tanzania. This is because big Telecom companies defer from deploying their expensive infrastructure in these areas fearing operations cost. It is proposed that the use of cellular open source technology as the basis for a new rural cellular network can go a long way in meeting this challenge by providing coverage in rural areas whilst simultaneously bringing down the cost of communication. This paper provides survey of recent open source cellular technologies. It further presents a prototype based on Open BTS for cellular connectivity in developing countries. In lab performance test for the proposed prototype confirm the feasibility of deploying cellular network based on open source technologies as an alternative to conventional mobile operator networks in a bid to solve the challenge.</p>
-  </span>
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-<article class="notepad-index-post post row">
-
-  <h3 datetime="1969-12-31T18:33:35-06:00" class="year">2015</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="FaustineHandover2015">Aloys N Mvuma Nyaura Kibinda and Anthony Faustine. <b>Handover Algorithm for Machine Type Communication in LTE Network</b>. <i>Informatics and Virtual Education</i>, 3(1) 2015.</span>
-<div id="FaustineHandover2015">
-
-  <span class="links">
-  
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-  
-  
-   [<a href=""><i class="fa fa-download" aria-hidden="true"></i></a>]
-    
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>Machine Type Communication (MTC) is a new type of data communication between machines and devices without human interactions. Long Term Evolution (LTE) is a recent third Generation Partnership Program (3GPP) cellular standard and is a promising technology to support future MTC data traffic. This paper evaluates two existing handover algorithms namely A2-A4-RSRQ and A3-RSRP. Based on the analysis of the optimal settings of both algorithms, the performances of the selected algorithms were compared and the results proved that A2-A4-RSRQ performs better than A3-RSRP. A2-A4-RSRQ handover algorithm is able to maintain acceptable throughput and handover delay as per 3GPP specification.</p>
-  </span>
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-<article class="notepad-index-post post row">
-
-  <h3 datetime="1969-12-31T18:33:34-06:00" class="year">2014</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="FaustineOms2014">Anthony Faustine and Aloys N. Mvuma. <b>Ubiquitous Mobile Sensing for Water Quality Monitoring and Reporting within Lake Victoria Basin</b>. <i>Wireless Sensor Network</i>, 6(12) :257–264, 2014.</span>
-<div id="FaustineOms2014">
-
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/10.4236/wsn.2014.612025">10.4236/wsn.2014.612025</a>]
-    
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
-   [<a href=""><i class="fa fa-download" aria-hidden="true"></i></a>]
-    
-
-  
-  
-  
-  
-    [<a href="https://sambaiga.github.io/sambaiga/assets/pdf/vicres_presentation.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>]
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>As the human population growth and industry pressure in most developing countries continue to increase, effective water quality monitoring and evaluation has become critical for water resources management programs. This paper presents the ubiquitous mobile sensing system for water quality data collection and monitoring applications in developing countries. The system was designed based on the analysis of the existing solution. Open source hardware and software was used to develop the prototype of the system. Field testing of the system conducted in Nkokonjero, Uganda and Mwanza, Tanzania verified the functionalities of the system and its practical application in actual environment. Results show that proposed solution is able to collect and present data in a mobile environment.</p>
-  </span>
-  
-</div>
-
-
-</li>
-<li><span id="FaustineWSN2014">Aloys N Mvuma Anthony Faustine and Hector J Mongi. <b>Wireless Sensor Networks for Water Quality Monitoring and Control within Lake Victoria Basin: Prototype Development</b>. <i>Wireless Sensor Network</i>, 6(12) :281–290, 2014.</span>
-<div id="FaustineWSN2014">
-
-  <span class="links">
-  
-    [doi: <a href="http://dx.doi.org/10.4236/wsn.2014.612027">10.4236/wsn.2014.612027</a>]
-    
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-    [<a href="" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>]
-  
-  
-  
-   [<a href=""><i class="fa fa-download" aria-hidden="true"></i></a>]
-    
-
-  
-  
-  
-  
-    [<a href="https://sambaiga.github.io/sambaiga/assets/pdf/vicres_presentation.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>]
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>The need for effective and efficient monitoring, evaluation and control of water quality in Lake Victoria Basin (LVB) has become more demanding in this era of urbanization, population growth and climate change and variability. Traditional methods that rely on collecting water samples, testing and analyses in water laboratories are not only costly but also lack capability for real-time data capture, analyses and fast dissemination of information to relevant stakeholders for making timely and informed decisions. In this paper, a Water Sensor Network (WSN) system prototype developed for water quality monitoring in LVB is presented. The development was preceded by evaluation of prevailing environment including availability of cellular network coverage at the site of operation. The system consists of an Arduino microcontroller, water quality sensors, and a wireless network connection module. It detects water temperature, dissolved oxygen, pH, and electrical conductivity in real-time and disseminates the information in graphical and tabular formats to relevant stakeholders through a web-based portal and mobile phone platforms. The experimental results show that the system has great prospect and can be used to operate in real world environment for optimum control and protection of water resources by providing key actors with relevant and timely information to facilitate quick action taking.</p>
-  </span>
-  
-</div>
-
-
-</li>
-<li><span id="Faustinedvs1">Deo Shao Anthony Faustine and Aloys Mvuma. <b>Combating Medical Drug Counterfeit in Tanzania: The Role of Technology</b>. In: <i>Proceedings of the 1st Cotul Annual Conference</i>, , Ruaha Catholic University, Iringa, Tanzania, 2014.</span>
-<div id="Faustinedvs1">
-
-  <span class="links">
-  
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>he infiltration of Counterfeit Drugs (CDs) in the Pharmaceutical Supply Chain (PSC) is
-adversely affecting health sectors in their efforts to provide quality health services to the
-public. According to the World Health Organisation (WHO), over 30 percent of anti-malaria
-drugs sold in the developing countries are substandard. Furthermore, the Confederation of
-Tanzania Industries (CTI) estimated that 60 percent of the medicines imported into Tanzania
-are counterfeits. Several initiatives have been taken in an attempt to curb the selling of CDs.
-However, the effectiveness of these initiatives remains questionable. There is an urgent need
-to formulate more effective strategies to secure the PSC by involving all stakeholders. In this
-regard, technology-based solution could be an effective uptake in mitigating CDs. This study
-assesses how the technology-based system can secure PSC and enable medical drugs
-verification in Tanzania. The proven adoption of Information and Communication
-Technologies (ICTs), especially mobile technology, could be leveraged to enable the
-enforcement of laws and regulations and advocate community awareness on medical safety</p>
-  </span>
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-<article class="notepad-index-post post row">
-
-  <h3 datetime="1969-12-31T18:33:33-06:00" class="year">2013</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="FaustineWSN2013">Anthony Faustine and Aloys N Mvuma. <b>Design and Simulation of Wireless Sensor Network for Water Quality Monitoring Around Lake Victoria</b>. <i>Journal of Informatics and Virtual Education</i>, :37, 2013.</span>
-<div id="FaustineWSN2013">
-
-  <span class="links">
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-</div>
-
-
-</li>
-<li><span id="Faustinenetwork2013">Anthony Faustine and Lucian Ngeze. <b>Enhancing Teaching and Learning Communication Network Courses in Higher Learning Institutions in Tanzania Using Simulations</b>. <i>Journal of Informatics and Virtual Education</i>, :30, 2013.</span>
-<div id="Faustinenetwork2013">
-
-  <span class="links">
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-<article class="notepad-index-post post row">
-
-  <h3 datetime="1969-12-31T18:33:32-06:00" class="year">2012</h3>
-   <section class="notepad-post-excerpt">
-  <ol class="bibliography"><li><span id="mastersthesis">Anthony Faustine. <b>Design of Wireless Sensor Network for Water Quality Monitoring around Lake Victoria Basin in Tanzania</b>, Master's thesis, The University of Dodoma, 2012.</span>
-<div id="mastersthesis">
-
-  <span class="links">
-  
-  
-    [<a class="abstract">Abs</a>]
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>Water quality monitoring and evaluation are important practices for water resources
-management.
-However for decades, water quality monitoring and evaluation in
-developing countries like Tanzania have depended on costly, time- and labor-intensive
-on-site sampling and data collection and transport to laboratories for evaluation.
-Emerging technologies like Wireless Sensor Network (WSN) can be used to provide
-relatively inexpensive, coordinated, intelligent networks allowing a well coordinated
-and continuous monitoring of water quality. This dissertation investigates the
-application of WSN in monitoring water quality and propose a low cost water quality
-monitoring system based on a WSN, which is to be applied to monitor water quality
-around Lake Victoria basin. Appropriate open source WSN technologies are identified
-and the proposed network is then analyzed through simulation using NS-2 with the aim
-of estimating the maximum number of nodes, maximum number of sources nodes and
-transmit power level that could be used while still achieving a desirable network
-performance. Using Radio Mobile software, this dissertation has demonstrated that long
-distant WSN link is possible in Musoma with link margin greater than 10dB and
-Fresnel zone greater than 0.6F.</p>
-  </span>
-  
-</div>
-
-
-</li></ol>
- </section>    
-
-    </article>
-
-
-  </article>
-
-</div>
-
+      </div>
+    </main>
 <footer>
 
   <div class="wrapper">
@@ -788,58 +355,10 @@ Fresnel zone greater than 0.6F.</p>
 </footer>
 
 <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="/assets/js/common.js"></script>
-<script>
-$(document).ready(function(){
-    var str =$(this).attr('id');
-    
-    $(".btnId").click(function(){
-        var str = $(this).attr('id');
-        var ret = str.split("_");
-        var id = ret[1];
-        $('#' + id).toggle();
-    });
-});
-</script>
-<!-- Load jQuery -->
-<script src="//code.jquery.com/jquery-.min.js"></script>
+<script src="/sambaiga/assets/javascript/bootstrap/jquery.min.js"></script>
+<script src="/sambaiga/assets/javascript/popper/dist/umd/popper.min.js"></script>
+<script src="/sambaiga/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
 
-<!-- Load Common JS -->
-<script src="https://sambaiga.github.io/sambaiga/assets/js/common.js"></script>
-
-
-
-
-
-<!-- Include custom icon fonts -->
-<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://sambaiga.github.io/sambaiga/assets/css/academicons.min.css">
-
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-XXXXXXXX-X', 'auto');
-ga('send', 'pageview');
-</script>
-
-      </div>
-    </main><footer>
-
-  <div class="wrapper">
-    &copy; Copyright 2020 .
-    
-    
-    :sambaiga@gmail.com
-  </div>
-
-</footer>
-
-<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="/assets/js/common.js"></script>
 <script>
 $(document).ready(function(){
     var str =$(this).attr('id');
