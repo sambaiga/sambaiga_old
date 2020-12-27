@@ -1,7 +1,7 @@
 ---
 title:  EO tools in the python eco-system
 layout: page
-thumbnail: img/resources/software.jpg
+thumbnail: software.jpg
 summary: >
   List of EO tools in the python eco-system.
 ---

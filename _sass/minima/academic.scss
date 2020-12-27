@@ -75,7 +75,11 @@ $type-line-small: (
   vsmall: map-get($type-scale-small, vsmall)*1.6,
 );
 
-
+$content-width:    1000px;
+$on-palm:          800px;
+$on-laptop:        1000px;
+$on-medium:        1000px;
+$on-large:         1200px;
 $breakpoint-medium: 75em;
 $breakpoint-small: 45em;
 
@@ -295,4 +299,5 @@ h6:hover .anchor-link {
   //"academic/gallery",
   //"academic/measure",
   //"academic/media-queries"
+
 

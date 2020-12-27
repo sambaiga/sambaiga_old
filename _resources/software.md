@@ -1,7 +1,7 @@
 ---
 title: ML and AI Softwares and Frameworks
 layout: page
-thumbnail: img/resources/software.jpg
+thumbnail: software.jpg
 summary: >
   List of Machine learning and AI python framework used by ML and AI researchers in academia and industry.
 ---
