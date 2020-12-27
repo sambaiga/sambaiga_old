@@ -1,10 +1,10 @@
 ---
 title: "ML and AI Courses"
 layout: post
-image: course.jpg
-description: "List of Machine learning and AI courses which can help you learn and understand important concepts in the"
+thumbnail: software.jpg
+summary: >
+  List of Machine learning and AI courses which can help you learn and understand important concepts in the.
 ---
-
 ## Courses
 
 ### Probabilistic Machine Learning
