@@ -123,10 +123,7 @@ permalink: /publications/
   <b>{{ publi.title }}</b><br/>
   {{ publi.authors | replace_first: 'A. Faustine', '<b>A. Faustine</b>'}}<br/>
   <i>{{ publi.journal }}</i> {% if publi.info %}{{publi.info}}{% endif %} {% if publi.year %}({{publi.year}}){% endif %}<br/>
-  {% if publi.url %}<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ publi.url }}.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a>{% endif %} 
-  {% if publi.doi %}<a href="{{ publi.doi }}" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>LINK</a>
-   {% endif %}{% if bibtest == true %} <a data-toggle="collapse" href="#{{publi.url}}2"  aria-expanded="false" aria-controls="{{publi.url}}2"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>{% endif %}
-   {% if publi.abstract %} <a data-toggle="collapse" href="#{{publi.url}}"   aria-expanded="false" aria-controls="{{publi.url}}"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a>{% endif %}
+  {% if publi.url %}<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ publi.url }}.pdf" target="_blank"><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a>{% endif %}{% if publi.doi %}<a href="{{ publi.doi }}" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>LINK</a>{% endif %}{% if publi.code %}<a href="{{ publi.code }}" target="_blank"><i class="fas fa-link" aria-hidden="true"></i>CODE</a>{% endif %}{% if bibtest == true %} <a data-toggle="collapse" href="#{{publi.url}}2"  aria-expanded="false" aria-controls="{{publi.url}}2"><i class="fa fa-quote-left" aria-hidden="true"></i>BIB</a>{% endif %}{% if publi.abstract %} <a data-toggle="collapse" href="#{{publi.url}}"   aria-expanded="false" aria-controls="{{publi.url}}"><i class="fa fa-info-circle" aria-hidden="true"></i> ABSTRACT</a>{% endif %}
 {% if publi.abstract %}
 <div class="collapse" id="{{publi.url}}"><div class="well-collapse">
  {{publi.abstract}}

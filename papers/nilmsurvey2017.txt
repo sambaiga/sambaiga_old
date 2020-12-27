@@ -1,9 +1,0 @@
-@article{1703.00785v3,
-Author        = {Anthony Faustine and Nerey Henry Mvungi and Shubi Kaijage and Kisangiri Michael},
-Title         = {A Survey on Non-Intrusive Load Monitoring Methodies and Techniques for
-  Energy Disaggregation Problem},
-ArchivePrefix = {arXiv},
-Year          = {2017},
-Month         = {Mar},
-Url           = {http://arxiv.org/abs/1703.00785v3},
-}
