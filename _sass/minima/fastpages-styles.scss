@@ -29,8 +29,7 @@ color: light-grey;
 
 // make non-headings slightly lighter
 .post-content p, .post-content li {
-font-size: 20px;
-color: #515151;
+color: #121212;
 }
 
 .post-link{
@@ -76,7 +75,6 @@ margin-top:.05rem !important;
 margin-bottom:.05rem !important;
 }
 .post-meta-description {
-color: rgb(88, 88, 88);
 font-size: 15px;
 margin-top:.05rem !important;
 margin-bottom:.05rem !important;
@@ -153,7 +151,6 @@ font-size: 105%;
 .page-description {
 margin-top: .5rem !important;
 margin-bottom: .5rem !important;
-color: #585858;
 font-size: 115%;
 }
 
@@ -164,7 +161,6 @@ padding-left: 0.375em;
 opacity: 35%;
 }
 .category-tags-link {
-color:rgb(187, 129, 129) !important;
 font-size: 13px !important;
 }
 
@@ -173,26 +169,22 @@ font-size: 13px !important;
 .search-results-list-item {padding-bottom: 1rem;}
 .search-results-list-item .search-result-title {
 font-size: 16px;
-color: #d9230f;
 }
 .search-result-rel-url {color: silver;}
-.search-results-list-item a {display: block; color: #777;}
+.search-results-list-item a {display: block; }
 .search-results-list-item a:hover, .search-results-list-item a:focus {text-decoration: none;}
 .search-results-list-item a:hover .search-result-title {text-decoration: underline;}
 
 .search-result-rel-date {
-color: rgb(109, 120, 138);
 font-size: 14px;
 }
 
 .search-result-preview {
-color: #777;
 font-size: 16px;
 margin-top:.02rem !important;
 margin-bottom:.02rem !important;
 }
 .search-result-highlight {
-color: #2e0137;
 font-weight:bold;
 }
 
@@ -216,7 +208,6 @@ height: 6px;
 border: 4px solid rgba(0, 0, 0, 0);
 background-clip: padding-box;
 -webkit-border-radius: 7px;
-background-color: #9D9D9D;
 -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
 }
 ::-webkit-scrollbar-button {
