@@ -8,63 +8,31 @@ summary: >
 ## Courses
 
 ### Probabilistic Machine Learning
-- [10-708 (CMU) Probabilistic Graphical Models](https://kayhan.dbmi.pitt.edu/node/38)
-  - Instructor: [Kayhan Batmanghelich]
-- [CSC2541: Scalable and Flexible Models of Uncertainty](https://csc2541-f17.github.io/)
-  - Instructor: [Roger Grosse](http://www.cs.toronto.edu/~rgrosse/)
-  - University of Toronto, Fall 2017.
-- [CS 228: Probabilistic Graphical Models](http://kuleshov.github.io/cs228-notes/)
-  - Instructor: [Stefano Ermon](http://cs.stanford.edu/~ermon/)
-  - Stanford University
+- [10-708 (CMU) Probabilistic Graphical Models, Kayhan Batmanghelich](https://kayhan.dbmi.pitt.edu/node/38)
+- [CSC2541: Scalable and Flexible Models of Uncertainty](https://csc2541-f17.github.io/)[Roger Grosse](http://www.cs.toronto.edu/~rgrosse/), University of Toronto, Fall 2017.
+- [CS 228: Probabilistic Graphical Models](http://kuleshov.github.io/cs228-notes/),  [Stefano Ermon](http://cs.stanford.edu/~ermon/),  Stanford University
+
 
 ### Machine learning and Deep learning
-- [Deep Learning: Do-It-Yourself](http://www.di.ens.fr/~lelarge/dldiy/#section-instructors)
-   - Physique en Ile de France, 2018
-- [EE-559 Deep Learning](https://documents.epfl.ch/users/f/fl/fleuret/www/dlc/#course-10)
-  - Instructor: [François Fleuret. T](http://www.idiap.ch/~fleuret/)
-  - École Polytechnique Fédérale de Lausanne, 2018
-- [CSC 321 Winter 2017: Intro to Neural Networks and Machine Learning](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/)
-  - Instructor: [Roger Grosse](http://www.cs.toronto.edu/~rgrosse/)
-  - University of Toronto, Fall 2017.
-- [Introduction to Machine Learning](http://www.cs.cmu.edu/~mgormley/courses/10601-s17/schedule.html)
-  - Instructor: [Matt Gormley](http://www.cs.cmu.edu/~mgormley/)
-  - Carnegie Mellon University.
-- [6.S191: Introduction to Deep Learnin](http://introtodeeplearning.com/index.html)
-  - Instructor: [Nick Locascio]()
-  - MIT.
-- [Deep Learning course](https://m2dsupsdlclass.github.io/lectures-labs/)
-  - Instructor: [ Olivier Grisel and Charles Ollion]()
-  - [Deep Learning Institute](https://datascience-x-master-paris-saclay.fr/)
-- [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)
-  - Instructor: [Andrew Ng](http://www.andrewng.org/)
-  - [Deep Learning Institute](https://www.deeplearning.ai/).
-- [Coursera: Machine Learning](https://www.coursera.org/learn/machine-learning?utm_source=gg&utm_medium=sem&campaignid=693373197&adgroupid=36745103515&device=c&keyword=andrew%20ng%20machine%20learning&matchtype=e&network=g&devicemodel=&adpostion=1t1&creativeid=156061453588&hide_mobile_promo&gclid=Cj0KCQjwpMLOBRC9ARIsAPiGeZBKNFc-u_fgHX0BtijPUnTtuQtF5tD0bO4gYnR7Kki42CYmQWOpTwEaAldPEALw_wcB)
-  - Instructor: [Andrew Ng](http://www.andrewng.org/)
-  - Stanford University.
-- [Deep Learning for Natural Language Processing:  2016-2017](http://www.cs.ox.ac.uk/teaching/courses/2016-2017/dl/)
-  - Instructor: [Phil Blunsom](http://www.cs.ox.ac.uk/people/phil.blunsom/)
-  - University of Oxford.
-- [Machine Learning: 2014-2015](https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/)
-  - Instructor: [Nando de Freitas](http://www.cs.ox.ac.uk/people/nando.defreitas/)
-  - University of Oxford.
-- [CS224d: Deep Learning for Natural Language Processing](http://cs224d.stanford.edu/)
-  - Instructor: [Richard Socher](http://www.socher.org/)
-  - Stanford University, Winter 2017.
-- [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
-   - Instructor: [Fei-Fei-Li](http://www.cs.toronto.edu/~rgrosse/), [Justin Johnson](http://cs.stanford.edu/people/jcjohns/) and [Serena Yeung](http://ai.stanford.edu/~syyeung/)
-   - Stanford University, Spring 2017.
-- [Practical Deep Learning for Coders](http://course.fast.ai/)
-   - Instructor: [Jeremy Howard]()
-   - [Fast.ai](http://www.fast.ai/)
-- [Cutting Edge Deep Learning For Coders](http://course.fast.ai/part2.html)
-   - Instructor: [Jeremy Howard]()
-   - [Fast.ai](http://www.fast.ai/)
+- [DS-GA 1008 Deep learning](https://atcold.github.io/pytorch-Deep-Learning/)
+- [Deep Learning: Do-It-Yourself](https://dataflowr.github.io/website/)
+- [DEEP LEARNING COURSE OF LAKE GENEVA](https://fleuret.org/dlc/) [François Fleuret. T](http://www.idiap.ch/~fleuret/)
+- [CSC 321 Winter 2017: Intro to Neural Networks and Machine Learning](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/), [Roger Grosse](http://www.cs.toronto.edu/~rgrosse/), University of Toronto, Fall 2017.
+- [Introduction to Machine Learning](http://www.cs.cmu.edu/~mgormley/courses/10601-s17/schedule.html), [Matt Gormley](http://www.cs.cmu.edu/~mgormley/) Carnegie Mellon University.
+- [6.S191: Introduction to Deep Learnin](http://introtodeeplearning.com/index.html)[Nick Locascio]() MIT.
+- [Deep Learning course](https://m2dsupsdlclass.github.io/lectures-labs/)[ Olivier Grisel and Charles Ollion]()
+- [Deep Learning Institute](https://www.deeplearning.ai/).
+- [Machine Learning: 2014-2015](https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/) [Nando de Freitas](http://www.cs.ox.ac.uk/people/nando.defreitas/) University of Oxford.
+- [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)[Fei-Fei-Li](http://www.cs.toronto.edu/~rgrosse/), [Justin Johnson](http://cs.stanford.edu/people/jcjohns/) and [Serena Yeung](http://ai.stanford.edu/~syyeung/)Stanford University, Spring 2017.
+- [Practical Deep Learning for Coders](http://course.fast.ai/), [Jeremy Howard](),[Fast.ai](http://www.fast.ai/)
+- [Cutting Edge Deep Learning For Coders](http://course.fast.ai/part2.html) [Jeremy Howard](), [Fast.ai](http://www.fast.ai/)
+- [Computer vision NYU](https://cs.nyu.edu/~fergus/teaching/vision/index.html)
+- [EECS 498-007 / 598-005 Deep Learning for Computer Vision](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/)
 
 ### Refoircement Learning
-- [CS 294: Deep Reinforcement Learning, Fall 2017](http://rll.berkeley.edu/deeprlcourse/).
-  - Instructor: Sergey Levine.
-- [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures)
-   - 26-27 August 2017 - Berkeley CA
+- [Spinning Up in Deep RL](https://spinningup.openai.com/en/latest/)
+- [CS 294: Deep Reinforcement Learning, Fall 2017](http://rll.berkeley.edu/deeprlcourse/), Sergey Levine.
+- [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures) 26-27 August 2017 - Berkeley CA
 
 ### AI for Earth Observation and Remote sensing
   - [ML, Information theory, Signal and Image processing for EO](https://isp.uv.es/courses.html).
