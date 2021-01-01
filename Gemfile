@@ -8,7 +8,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 4.0.0"
-gem 'nakagori' ~>1.11.0.rc4
+gem 'nokogiri' ~>1.11.0.rc4
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima"
 # To upgrade, run `bundle update github-pages`.
