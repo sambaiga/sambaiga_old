@@ -5,7 +5,10 @@
 @import 
   url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
   
-  
+/* Top navigation bar */
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   height: auto;
@@ -278,6 +281,29 @@ h6:hover .anchor-link {
 }
 ::-webkit-scrollbar-corner {
   background-color: transparent;
+}
+
+
+p.byline {
+	text-align: center;
+	font-size: 18px;
+	line-height: 36px;
+	margin-top: -24px;
+	margin-bottom: 48px;
+}
+
+
+pubtit {
+	font-weight: bold;
+}
+
+firstp {
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px; /* or 950px */
 }
 
 
