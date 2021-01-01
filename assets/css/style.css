@@ -2825,6 +2825,7 @@ s .embed-container { position: relative; padding: 0px; margin: 0px; width: 175px
 
 @media (min-width: 1200px) { .text-xl-left { text-align: left !important; } .text-xl-right { text-align: right !important; } .text-xl-center { text-align: center !important; } }
 
+/* Top navigation bar */
 body { font-family: "Open Sans", sans-serif; height: auto; min-height: 100%; line-height: 1; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
@@ -2876,6 +2877,12 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:hover .a
 ::-webkit-scrollbar-button { width: 0; height: 0; display: none; }
 
 ::-webkit-scrollbar-corner { background-color: transparent; }
+
+p.byline { text-align: center; font-size: 18px; line-height: 36px; margin-top: -24px; margin-bottom: 48px; }
+
+pubtit { font-weight: bold; }
+
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl { margin-right: auto; margin-left: auto; max-width: 1000px; /* or 950px */ }
 
 /******************************************************************************/
 /******************************************************************************/
