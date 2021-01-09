@@ -1,11 +1,11 @@
-/*-----------------------------------*/
-/*--- IMPORT STYLES FOR FASTPAGES ---*/
-@import "minima/fastpages-styles";   
-@import "minima/academic";   
+// Import styles for fastpages.
+@import "minima/fastpages-styles";
 
+// Add your styles below
 
-/*-----------------------------------*/
-/*----- ADD YOUR STYLES BELOW -------*/
+@import "minima/bootstrap/bootstrap";
+@import "minima/bootstrap-4-jekyll/bootstrap-4-jekyll";
+@import "minima/academic";
+// @import "bootstrap_customization";
+@import "minima/fastpages-dracula-highlight";
 
-// If you want to turn off dark background for syntax highlighting, comment or delete the below line.
-@import "minima/fastpages-dracula-highlight"; 

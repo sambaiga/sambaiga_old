@@ -105,7 +105,7 @@ plugins:
   - jekyll-gist
   - jekyll-octicons
   - jekyll-toc
- # - jekyll-twitter-plugin
+  - jekyll-twitter-plugin
   - jekyll-relative-links
   - jekyll-seo-tag
   - jekyll-remote-theme
@@ -119,10 +119,6 @@ plugins:
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
 
-# See https://jekyllrb.com/docs/pagination/
-# For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
-paginate: 15
-paginate_path: /page:num/
 
 remote_theme: jekyll/minima
 
@@ -132,18 +128,61 @@ titles_from_headings:
   collections: true
 
 
-
-  
-highlighter: rouge
+# Markdown and syntax highlight
 markdown: kramdown
+highlighter: rouge
+highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes  
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 kramdown:
   math_engine: katex
   input: GFM
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+  input: GFM
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
 
-# to limit size of xml as it can grow quite large.
-feed:
-  posts_limit: 5 #default posts_limit: 10
-  excerpt_only: true
+#pagination
+#gems:
+#  - jekyll-paginate
+#paginate: 5
+#paginate_path: /page:num/
+
+  # -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+collections:
+  talks:
+    output: true
+    permalink: /talks/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/  
+  resources:
+    output: true
+    permalink: /resources/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/  
+
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/ 
+  
+
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
+
+
