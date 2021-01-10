@@ -12,28 +12,6 @@ github_username: sambaiga
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "sambaiga"
 
-# OPTIONAL: override baseurl and url if using a custom domain
-# Note: leave out the trailing / from this value. 
-url: "http://sambaiga.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-###########################################################
-#########  Special Instructions for baseurl ###############
-#
-#### Scenario One: If you do not have a Custom Domain #####
-#    -  if you are not using a custom domain, the baseurl *must* be set to your repo name
-# 
-####  Scenario Two: If you have a Custom Domain #####
-# 1. If your domain does NOT have a subpath, this leave this value as ""
-# 2. If your domain does have a subpath, you must preceed the value with a / and NOT have a / at the end.  
-#      For example: 
-#           "" is valid
-#           "/blog"        is valid
-#            "/blog/site/" is invalid  ( / at the end)
-#            "/blog/site"  is valid
-#            "blog/site"   is invalid  ( because doesn't begin with a /)
-#
-# 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
-#
 baseurl: "/sambaiga" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
@@ -50,44 +28,31 @@ linkedin_username: sambaiga
 scholar_userid: Anthony Faustine
 orcid_id: # your ORCID ID
 
-# Set this to true to get LaTeX math equation support
-use_math: true
 
 # Set this to true to display the summary of your blog post under your title on the Home page.
 show_description: true
 
 # Set this to true to display image previews on home page, if they exist
-show_image: true
+show_image: false
+
+# Set this to true to turn on annotations with hypothes.is (https://web.hypothes.is/)
+annotations: true
 
 # Set this to true to display tags on each post
 show_tags: true
 
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics:
-
 exclude:
   - docker-compose.yml
   - action.yml
   - Makefile
-   - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - update_boostrap.sh
-  - switch_theme.sh
-  - makebib.py
 
-
-  
-# Do you want to group your publications by year? {true/false}
-group_pub_by_year: true
 # this setting allows you to keep pages organized in the _pages folder
 include:
   - _pages
-  - .htaccess
 
-
-
- # This specifies what badges are turned on by default for notebook posts.
+# This specifies what badges are turned on by default for notebook posts.
 default_badges:
   github: true
   binder: true
@@ -95,7 +60,7 @@ default_badges:
 
 # Escape HTML in post descriptions
 html_escape:
-  description: false 
+  description: false
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
@@ -112,13 +77,11 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
-  #- jekyll/scholar
-  - jekyll-youtube
- 
 
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
-
+paginate: 15
+paginate_path: /page:num/
 
 remote_theme: jekyll/minima
 
@@ -127,62 +90,16 @@ titles_from_headings:
   strip_title: true
   collections: true
 
-
-# Markdown and syntax highlight
-markdown: kramdown
 highlighter: rouge
-highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes  
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
+markdown: kramdown
 kramdown:
   math_engine: katex
   input: GFM
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
-  input: GFM
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
 
-#pagination
-#gems:
-#  - jekyll-paginate
-#paginate: 5
-#paginate_path: /page:num/
-
-  # -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
-collections:
-  talks:
-    output: true
-    permalink: /talks/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/  
-  resources:
-    output: true
-    permalink: /resources/:path/
-  publications:
-    output: true
-    permalink: /publications/:path/  
-
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /news/:path/ 
-  
-
-
-# -----------------------------------------------------------------------------
-# Jekyll Scholar
-# -----------------------------------------------------------------------------
-
-
-
+# to limit size of xml as it can grow quite large.
+feed:
+  posts_limit: 5 #default posts_limit: 10
+  excerpt_only: true

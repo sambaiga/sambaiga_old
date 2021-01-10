@@ -2,58 +2,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {% if page.seo.title %}
-  <title>{{ page.seo.title }}</title>
-  {% else %}
-  <title>{{ page.title | append: " | " | default:"" }}{% include _i18n/i18n.html value=site.title %}</title>
-  {% endif %}
-
-  {% if page.seo.description %}
-  <meta name="description" content="{{ page.seo.description | truncate: 160 }}">
-  {% elsif page.summary %}
-  <meta name="description" content="{{ page.summary | truncate: 160 }}">
-  {% else %}
-  <meta name="description" content="{% include _i18n/i18n.html value=site.description %}">
-  {% endif %}
-
-
-
-  {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image" />
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
-
-  {% assign pagename = page.path | split:"." | first %}
-
-  {% if page.layout == "post" %}
-    {% assign i18n_posts = site.posts | where_exp:"p","p.path contains pagename" %}
-  {% else %}
-    {% assign i18n_posts = site.pages | where_exp:"p","p.path contains pagename" %}
-  {% endif %}
-
-  {% for t_lang in site.langs %}
-    {% unless t_lang == plang %}
-      {% assign t = i18n_posts | where:"lang",t_lang | first %}
-
-      {% if t %}
-      <link rel="alternate" hreflang="{{ t_lang }}" href="{{ site.url }}{{ t.url }}" />
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
-
-  {% if site.piwik %}
-  {% include piwik.html %}
-  {% endif %}
-
-  {% if jekyll.environment == 'production' %}
-  {% endif %}
 
   {%- include custom-head.html -%}
   

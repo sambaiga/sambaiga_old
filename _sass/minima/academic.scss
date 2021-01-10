@@ -173,11 +173,11 @@ color: light-grey;
 }
 
 // Width of the content area
-$content-width:    900px;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
+$content-width:    1000px;
+$on-palm:          800px;
+$on-laptop:        1000px;
+$on-medium:        1000px;
+$on-large:         1200px;
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
