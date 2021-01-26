@@ -37,3 +37,6 @@ summary: >
 ### AI for Earth Observation and Remote sensing
   - [ML, Information theory, Signal and Image processing for EO](https://isp.uv.es/courses.html).
   
+### Practical ML
+- [Full Stack Deep Learning](https://course.fullstackdeeplearning.com/)
+- [Berkeley Spring 2021 - Full Stack Deep Learning](https://docs.google.com/document/d/e/2PACX-1vSSSHcahlrJRvVq4qRKDX2jYLjhgpbWZjqmDcWZ7w3FWItZrlSKw6GY7rcSj5ZkJr6M0DaR8QbKCd8S/pub)
