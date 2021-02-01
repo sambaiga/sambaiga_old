@@ -1,3 +1,15 @@
+- title: "Watt’s up at Home? Smart Meter Data Analytics from a Consumer-Centric Perspective"
+  authors: A. Faustine, Völker, B.; Reinhardt,  A.; Pereira, L. 
+  url: wattshome
+  journal:  Energies
+  image: wattshome.jpg
+  year: 2021
+  info: 14(3),719
+  doi: https://doi.org/10.3390/en14030719
+  abstract: "The key advantage of smart meters over traditional metering devices is their ability to transfer consumption information to remote data processing systems. Besides enabling the automated collection of a customer’s electricity consumption for billing purposes, the data collected by these devices makes the realization of many novel use cases possible. However, the large majority of such services are tailored to improve the power grid’s operation as a whole. For example, forecasts of household energy consumption or photovoltaic production allow for improved power plant generation scheduling. Similarly, the detection of anomalous consumption patterns can indicate electricity theft and serve as a trigger for corresponding investigations. Even though customers can directly influence their electrical energy consumption, the range of use cases to the users’ benefit remains much smaller than those that benefit the grid in general. In this work, we thus review the range of services tailored to the needs of end-customers. By briefly discussing their technological foundations and their potential impact on future developments, we highlight the great potentials of utilizing smart meter data from a user-centric perspective. Several open research challenges in this domain, arising from the shortcomings of state-of-the-art data communication and processing methods, are furthermore given. We expect their investigation to lead to significant advancements in data processing services and ultimately raise the customer experience of operating smart meters."
+
+
+
 - title: "Adaptive Weighted Recurrence Graphs for Appliance Recognition in Non-Intrusive Load Monitoring"
   authors: A. Faustine, L. Pereira and C. Klemenjak
   url: AWRG
