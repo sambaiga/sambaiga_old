@@ -1,42 +1,15 @@
 ---
 layout: home
 search_exclude: true
-news: false
-social: false
+image: images/logo.png
 ---
 
-<img src="images/banner.png" style="width:100%;" />
+This site is built with [fastpages](https://github.com/fastai/fastpages), An easy to use blogging platform with extra features for Jupyter Notebooks.
 
+![]({{site.baseurl}}/images/diagram.png "https://github.com/fastai/fastpages")
 
-<p>Anthony Faustine, is a Data scientist  at <a href="https://www.ceadar.ie/"> CeADAR (UCD), Dublin, Ireland</a> where is devising and implementing data analytics and Artificial Intelligence technical solutions for various application domains. 
-His research interest lies in using machine learning, deep learning, data science, and signal processing to develop computational models, methods, and tools to help industries, organisations and policymakers design more effective solutions and policies for sustainable development and climate change mitigation and adaptation. A brief outline of my current research topics is provided below.
-<p><strong>Research Interest</strong></p>
-<ol>
-<li>Machine learning and signal processing for energy systems with a focus on Non-Intrusive Load Monitoring (NILM), Community Energy and Smart Grid.
-</li>
-<li>Artificial Intelligence for Earth Observations(EO) data with a focus on sustainable energy, agriculture and natural resources management. </li>
-<li>Robust deep learning for industrial applications with a focus on a learning algorithm that allows uncertainty quantification, is robust to adversarial attacks and allows self-supervised or semi-supervised learning </li>
-<li>Data management with a focus on specification, strategies, best practises and guideline for machine learning training dataset (TDs) development. </li>
-</ol>
+[fastpages](https://github.com/fastai/fastpages) automates the process of creating blog posts via GitHub Actions, so you don't have to fuss with conversion scripts.  A full list of features can be found on [GitHub](https://github.com/fastai/fastpages).  
 
-<div class="news">
-<div class="jumbotron">
-    <b>News</b><br/>
-    {% for article in site.data.news %}
-    <table>
-    <td class="date"></td><b></b>{{ article.date }}:</b>{{ article.headline }} </td>
-</table>
-    {% endfor %}
-
-    </div>
-</div>
-</div>
-
-<div class="jumbotron">
-<div class="jekyll-twitter-plugin"><a class="twitter-timeline" data-tweet-limit="1" href="https://twitter.com/sambaiga?ref_src=twsrc%5Etfw">Tweets by sambaiga</a>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-</div>
-</div>
+You can edit the `index.html` file to change this content.
 
 # Posts
