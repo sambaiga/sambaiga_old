@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% if site.paginate %}
+{% assign posts = paginator.posts %}
+{% else %}
+{% assign posts = site.talks %}
+{% endif %}
+
+
+
+<ul class="post-list">
+    {% for post in site.resources reversed %}
+ 
+    <li>
+          
+            {% if post.thumbnail %}
+            <div class="Box box-shadow-medium rounded-1 col-12">
+                {%- if post.image -%}
+                <div class="col-4 d-table-cell p-3 v-align-middle">
+                    <img class="image-preview " src="{{ site.url }}{{ site.baseurl }}/images/resources/{{ post.thumbnail }}" alt="{{ post.title | escape }}" />
+                  </div>
+                {%- endif -%}
+                <div class="col-8 d-table-cell p-3">
+                    <h3>
+                      <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                      </a>
+                    </h3>
+                    <p class="post-meta-description">{{ post.description }}</p>
+                      <p class="post-meta">{{ post.date | date: date_format }}</p>
+                  </div>
+                  <p>{{ post.summary }}</p>
+              </div>
+           
+            {% endif %}
+  
+    {% endfor %}
+
+</ul>
