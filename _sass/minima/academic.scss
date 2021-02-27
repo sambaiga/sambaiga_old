@@ -1,0 +1,329 @@
+// Define defaults for each variable.
+//https://hookagency.com/website-color-schemes/
+  
+@charset "utf-8";
+@import 
+  url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+  
+/* Top navigation bar */
+
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: auto;
+  min-height: 100%;
+  line-height: 1; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
+$type-scale-large: (
+  h1: 2.941rem,
+  h2: 2.111rem,
+  h3: 1.663rem,
+  h4: 1.333rem,
+  p: 1.25rem,
+  small: 1.15rem,
+  vsmall: 1rem,
+);
+
+$type-scale-medium: (
+  h1: 2.441rem,
+  h2: 1.653em,
+  h3: 1.563rem,
+  h4: 1.333rem,
+  p: 1.25rem,
+  small: 1.15rem,
+  vsmall: 1rem,
+);
+
+$type-scale-small: (
+  h1: 2.148rem,
+  h2: 1.719rem,
+  h3: 1.375rem,
+  h4: 1.233rem,
+  p: 1.1rem,
+  small: 0.95rem,
+  vsmall: 0.85rem,
+);
+
+$type-line-large: (
+  h1: map-get($type-scale-large, h1)*1.1,
+  h2: map-get($type-scale-large, h2)*1.2,
+  h3: map-get($type-scale-large, h3)*1.2,
+  h4: map-get($type-scale-large, h4)*1.2,
+  p: map-get($type-scale-large, p)*1.6,
+  small: map-get($type-scale-large, small)*1.6,
+  vsmall: map-get($type-scale-large, vsmall)*1.6,
+);
+
+$type-line-medium: (
+  h1: map-get($type-scale-medium, h1)*1.1,
+  h2: map-get($type-scale-medium, h2)*0.8,
+  h3: map-get($type-scale-medium, h3)*1.3,
+  h4: map-get($type-scale-medium, h4)*1.3,
+  p: map-get($type-scale-medium, p)*1.6,
+  small: map-get($type-scale-medium, small)*1.6,
+  vsmall: map-get($type-scale-medium, vsmall)*1.6,
+);
+
+$type-line-small: (
+  h1: map-get($type-scale-small, h1)*1.1,
+  h2: map-get($type-scale-small, h2),
+  h3: map-get($type-scale-small, h3)*0.9,
+  h4: map-get($type-scale-small, h4)*0.9,
+  p: map-get($type-scale-small, p)*1.6,
+  small: map-get($type-scale-small, small)*1.6,
+  vsmall: map-get($type-scale-small, vsmall)*1.6,
+);
+
+$content-width:    1000px;
+$on-palm:          800px;
+$on-laptop:        1000px;
+$on-medium:        1000px;
+$on-large:         1200px;
+$breakpoint-medium: 75em;
+$breakpoint-small: 45em;
+
+@mixin size($level) {
+  font-size: map-get($type-scale-large, $level);
+  line-height: map-get($type-line-large, $level);
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: map-get($type-scale-medium, $level);
+    line-height: map-get($type-line-medium, $level);
+  }
+  @media (max-width: $breakpoint-small) {
+    font-size: map-get($type-scale-small, $level);
+    line-height: map-get($type-line-medium, $level);
+  }
+}
+
+$base-font-family: "Open Sans", sans-serif;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
+
+
+$alt-font-family: "Open Sans", sans-serif !default;
+$alt-font-weight: bold !default;
+
+$spacing-unit:     50px !default;
+
+
+
+
+.post img {
+  display: block;
+  // border:1px solid #021a40;
+  vertical-align: top;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post figcaption {
+text-align: center;
+font-size: .8rem;
+font-style: italic;
+color: light-grey;
+}
+
+.language-python + .language-plaintext {
+  border-left: 1px solid grey;
+  margin-left: 1rem !important;
+}
+
+
+// for Jupyter Notebook HTML Code Cells modified from https://www.fast.ai/public/css/hyde.css
+
+.input_area pre, .input_area div {
+  margin-bottom:2rem !important;
+  margin-top:1.5rem !important;
+  padding-bottom:0 !important;
+  padding-top:0 !important;
+  //background: #323443 !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  //font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace;
+  border-radius: 5px;
+  font-size: 100%;
+}
+.output_area pre, .output_area div {
+  margin-bottom:1rem !important;
+  margin-top:1rem !important;
+  padding-bottom:0 !important;
+  padding-top:0 !important;
+}
+.input_area pre {
+  border-left: 1px solid lightcoral;
+}
+.output_area pre {
+  border-left: 1px solid grey;
+  margin-left: 1rem !important;
+}
+
+.code_cell table { width: auto; }
+
+.page-content {
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  //font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
+}
+
+// Width of the content area
+$content-width:    1000px;
+$on-palm:          800px;
+$on-laptop:        1000px;
+$on-medium:        1000px;
+$on-large:         1200px;
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// KaTeX math display
+.math-display {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+// make sure the post title doesn't have too much spacing
+.post-title { margin-top: .5rem !important; 
+            color: #0076df;}
+
+li {
+  h3, h4 {
+  margin-top:.05rem !important;
+  margin-bottom:.05rem !important;
+  }
+  .post-meta-description {
+    color: rgb(88, 88, 88);
+    font-size: 15px;
+    margin-top:.05rem !important;
+    margin-bottom:.05rem !important;
+  }
+}
+
+
+
+//  Code Folding
+details.description[open] summary::after {
+ content: attr(data-open);
+}
+
+details.description:not([open]) summary::after {
+ content: attr(data-close);
+}
+
+// Notebook badges
+.notebook-badge-image {
+ border:0 !important;
+}
+
+// Adjust font size for footnotes.
+.footnotes {
+ font-size: 12px !important;
+ p, li{
+   font-size: 12px !important;
+} 
+}
+// Make Anchor Links Appear Only on Hover
+
+.anchor-link {
+  opacity: 0;
+  padding-left: 0.375em;
+  \-webkit-text-stroke: 1.75px white;
+  \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  \-moz-transition: opacity 0.2s ease-in-out 0.1s;
+  \-ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  opacity: 1;
+}
+
+
+// customize scrollbars
+::-webkit-scrollbar {
+  width: 14px;
+  height: 18px;
+}
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  -webkit-border-radius: 7px;
+  background-color:$background-color;
+  -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+
+p.byline {
+	text-align: center;
+	font-size: 18px;
+	line-height: 36px;
+	margin-top: -24px;
+	margin-bottom: 48px;
+}
+
+
+pubtit {
+	font-weight: bold;
+}
+
+firstp {
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px; /* or 950px */
+}
+
+
+
+@import    
+  
+  "academic/variables",
+  "academic/basscss",
+  "academic/base",
+  "academic/clearfix",
+  "academic/links",
+  "academic/layout",
+  "academic/pagination",
+  "academic/profile",
+  "academic/tables"
+  //"academic/publications",
+  //"academic/pages",
+  //"academic/projects",
+  //"academic/gallery",
+ // "academic/measure",
+  //"academic/media-queries"
+
+

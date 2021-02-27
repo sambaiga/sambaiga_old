@@ -1,0 +1,39 @@
+a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $theme-color;
+        text-decoration: none;
+    }
+}
+
+article a, .news a {
+    color: $theme-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $theme-color;
+        text-decoration: underline;
+    }
+}
+
+.social a {
+    color: $theme-color;
+
+    &:hover { color: $theme-color; }
+}
+
+.button {
+  text-shadow: none;
+  background-image: none;
+ }
+
+ .button:hover,
+ .button:focus,
+ .button:active {
+   color: white;
+   text-shadow: none;
+   background-image: none;
+ }
+

@@ -3,9 +3,10 @@
 @import "minima/fastpages-styles";   
 
 
-
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-
+@import "minima/bootstrap/bootstrap";
+@import "minima/bootstrap-4-jekyll/bootstrap-4-jekyll";
+@import "minima/academic";
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 @import "minima/fastpages-dracula-highlight"; 
