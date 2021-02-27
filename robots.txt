@@ -1,1 +1,1 @@
-Sitemap: http://sambaiga.github.io/sambaiga/sitemap.xml
+Sitemap: /sambaiga/sitemap.xml
